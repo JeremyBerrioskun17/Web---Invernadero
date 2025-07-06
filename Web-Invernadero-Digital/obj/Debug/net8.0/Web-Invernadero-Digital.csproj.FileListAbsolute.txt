@@ -1,0 +1,108 @@
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\appsettings.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.staticwebassets.runtime.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.staticwebassets.endpoints.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.exe
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.deps.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.runtimeconfig.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.dll
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.pdb
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.AssemblyInfoInputs.cache
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.AssemblyInfo.cs
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.RazorAssemblyInfo.cache
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.RazorAssemblyInfo.cs
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\bundle\Web-Invernadero-Digital.styles.css
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\projectbundle\Web-Invernadero-Digital.bundle.scp.css
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.Web-Invernadero-Digital.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.Web-Invernadero-Digital.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.build.Web-Invernadero-Digital.props
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Web-Invernadero-Digital.props
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Web-Invernadero-Digital.props
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.dll
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\refint\Web-Invernadero-Digital.dll
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.pdb
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.genruntimeconfig.cache
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\ref\Web-Invernadero-Digital.dll
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\package-lock.json
+C:\Users\Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\package.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\appsettings.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\package-lock.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\package.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.staticwebassets.endpoints.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.staticwebassets.runtime.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.exe
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.deps.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.runtimeconfig.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.pdb
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.AssemblyInfoInputs.cache
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.AssemblyInfo.cs
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.csproj.CoreCompileInputs.cache
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.RazorAssemblyInfo.cache
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.RazorAssemblyInfo.cs
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\bundle\Web-Invernadero-Digital.styles.css
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\projectbundle\Web-Invernadero-Digital.bundle.scp.css
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.Web-Invernadero-Digital.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.Web-Invernadero-Digital.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.build.Web-Invernadero-Digital.props
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Web-Invernadero-Digital.props
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Web-Invernadero-Digital.props
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\refint\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.pdb
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.genruntimeconfig.cache
+C:\Users\Ing Jeremy\Desktop\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\ref\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\appsettings.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\package-lock.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\package.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.staticwebassets.endpoints.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.staticwebassets.runtime.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.exe
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.deps.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.runtimeconfig.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\bin\Debug\net8.0\Web-Invernadero-Digital.pdb
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.AssemblyInfoInputs.cache
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.AssemblyInfo.cs
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.csproj.CoreCompileInputs.cache
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.RazorAssemblyInfo.cache
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.RazorAssemblyInfo.cs
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\bundle\Web-Invernadero-Digital.styles.css
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\scopedcss\projectbundle\Web-Invernadero-Digital.bundle.scp.css
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.Web-Invernadero-Digital.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.Web-Invernadero-Digital.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.build.Web-Invernadero-Digital.props
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Web-Invernadero-Digital.props
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Web-Invernadero-Digital.props
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\refint\Web-Invernadero-Digital.dll
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.pdb
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\Web-Invernadero-Digital.genruntimeconfig.cache
+C:\Users\Ing Jeremy\Desktop\Digital II\Web-Invernadero-Digital\Web-Invernadero-Digital\obj\Debug\net8.0\ref\Web-Invernadero-Digital.dll

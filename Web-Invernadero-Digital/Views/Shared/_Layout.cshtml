@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web_Invernadero_Digital</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Fonts y Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.2rem;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-custom {
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+        }
+
+            .navbar-custom .nav-link {
+                color: white !important;
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+
+                .navbar-custom .nav-link:hover {
+                    color: #d4edda !important;
+                }
+
+            .navbar-custom .navbar-brand {
+                font-size: 1.7rem;
+                font-weight: bold;
+                color: white !important;
+            }
+
+        header {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer.footer {
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+            footer.footer a {
+                color: #d4edda;
+                text-decoration: underline;
+                margin: 0 0.5rem;
+            }
+
+                footer.footer a:hover {
+                    color: #a5d6a7;
+                }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <header>
+        @* <nav class="bg-gradient-to-r from-green-800 to-green-400 text-white shadow-md sticky top-0 z-50"> *@
+        <nav class="bg-gradient-to-r from-green-800 to-green-400 text-white shadow-md sticky top-0 z-50 transition duration-500 ease-in-out transform animate-fade-in-down">
+            <div class="w-full px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16 w-full">
+
+                    <!-- Logo e ítems alineados a la izquierda -->
+                    <div class="flex items-center space-x-8">
+                        <!-- Logo -->
+                        <div class="flex items-center text-white text-2xl font-bold">
+                            <i class="fa-solid fa-seedling mr-2"></i>
+                            <a href="@Url.Action("Index", "Home")" class="text-white hover:text-green-100">Invernadero</a>
+                        </div>
+
+                        <!-- Menú desktop -->
+                        <div class="hidden md:flex space-x-6">
+                            <a href="@Url.Action("Index", "Home")" class="text-white hover:text-green-100 font-medium flex items-center transition duration-300 ease-in-out no-underline">
+                                <i class="fa-solid fa-house mr-1"></i> Home
+                            </a>
+                            <a href="@Url.Action("Index", "Materials")" class="text-white hover:text-green-100 font-medium flex items-center transition duration-300 ease-in-out no-underline">
+                                <i class="fa-solid fa-leaf mr-1"></i> Información
+                            </a>
+                            <a href="@Url.Action("Index", "ControlCenter")" class="text-white hover:text-green-100 font-medium flex items-center transition duration-300 ease-in-out no-underline">
+                                <i class="fa-solid fa-sliders mr-1"></i> Centro de Control
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Botón del menú móvil -->
+                    <div class="md:hidden">
+                        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-green-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú móvil -->
+            <div class="md:hidden hidden px-4 pb-4" id="mobile-menu">
+                <a href="@Url.Action("Index", "Home")" class="block py-2 text-white hover:text-green-100">
+                    <i class="fa-solid fa-house mr-1"></i> Home
+                </a>
+                <a href="@Url.Action("Index", "Materials")" class="block py-2 text-white hover:text-green-100">
+                    <i class="fa-solid fa-leaf mr-1"></i> Información
+                </a>
+                <a href="@Url.Action("Index", "ControlCenter")" class="block py-2 text-white hover:text-green-100">
+                    <i class="fa-solid fa-sliders mr-1"></i> Centro de Control
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <div class="">
+            @RenderBody()
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 - Web_Invernadero_Digital ULSA ·
+            <a href="/Home/Privacy">Aviso de Privacidad</a> ·
+            <a href="#!">Términos</a> ·
+            <a href="#!">Contacto</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+
+        .animate-fade-in-down {
+            animation: fade-in-down 0.5s ease-out forwards;
+        }
+    </style>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

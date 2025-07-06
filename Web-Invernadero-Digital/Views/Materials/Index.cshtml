@@ -1,0 +1,743 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes del Invernadero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+
+    <!-- Agrega AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .card-component {
+            border-left: 5px solid #4caf50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .card-img-top {
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .code-font {
+            font-family: Consolas, monospace;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+
+        {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+        }
+
+        {
+            transform: scale(1);
+            opacity: 0.3;
+        }
+
+        100% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+
+        }
+
+        .animate-ping-slow {
+            animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+    <div class="px-6 py-4">
+      
+        <!-- Hero Section - Invernadero Inteligente -->
+        <section class="relative bg-green-50 overflow-hidden">
+            <div class="container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center gap-10">
+
+                <!-- Texto Principal -->
+                <div class="max-w-xl" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-green-800 leading-tight mb-4">
+                        🌿 Invernadero Inteligente <br> para el Futuro Verde
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Automatización, eficiencia y tecnología para cuidar tus plantas con sensores, riego automático y control de luz.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#componentes"
+                           class="py-3 px-6 bg-green-600 text-white font-semibold rounded-xl shadow-md hover:bg-green-700 transition duration-300">
+                            Ver Componentes
+                        </a>
+                        <a href="#demo"
+                           class="py-3 px-6 bg-white text-green-700 border border-green-300 font-semibold rounded-xl hover:bg-green-100 transition duration-300">
+                            Ver Funcionamiento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagen / Ilustración -->
+                <div class="w-full md:w-1/2 relative" data-aos="fade-left">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7665/7665422.png" alt="Ilustración invernadero"
+                         class="w-full max-w-sm mx-auto md:mx-0 animate-float" />
+                    <!-- Plant Icons decorativos -->
+                    <div class="absolute -top-8 -left-8 w-16 h-16" data-aos="fade-down">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2900/2900282.png" alt="hoja" class="w-full h-full">
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-14 h-14" data-aos="fade-up">
+                        <img src="https://cdn-icons-png.flaticon.com/512/7662/7662908.png" alt="planta" class="w-full h-full">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="overflow-hidden bg-white py-12 sm:py-20">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 items-center">
+                    <!-- Texto -->
+                    <div class="lg:pr-8 lg:pt-4" data-aos="fade-right">
+                        <div class="lg:max-w-lg">
+                            @* <h2 class="text-base font-semibold leading-7 text-green-600">Montaje virtual</h2> *@
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Diseño en Tinkercad</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-600">
+                                Para simular y validar el funcionamiento del invernadero inteligente, se desarrolló un montaje virtual en <strong>Tinkercad</strong>.
+                                Este entorno permitió conectar virtualmente los sensores y actuadores, y probar el código de Arduino de manera interactiva y segura.
+                            </p>
+                            <ul class="mt-8 space-y-4 text-base leading-7 text-gray-700 list-disc list-inside">
+                                <li><span class="font-semibold text-gray-900">Sensores conectados:</span> humedad del suelo, temperatura, luz ambiental.</li>
+                                <li><span class="font-semibold text-gray-900">Actuadores:</span> ventilador, bomba de riego y sistema de iluminación.</li>
+                                <li><span class="font-semibold text-gray-900">Simulación en tiempo real:</span> permitió verificar el comportamiento automático del sistema.</li>
+                            </ul>
+                            <div class="mt-10 flex items-center gap-x-6">
+                                <!-- Botón para abrir modal -->
+                                <button type="button" class="rounded-md bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 transition"
+                                        data-bs-toggle="modal" data-bs-target="#codigoModal">
+                                    Ver código
+                                </button>
+                                <a href="#" class="text-sm font-semibold leading-6 text-gray-700 hover:text-green-600 transition">Leer más<span aria-hidden="true"> →</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen del Tinkercad -->
+                    <img src="sources/Circuito.png"
+                         alt="Montaje del invernadero en Tinkercad"
+                         class="w-full max-w-xl rounded-xl shadow-xl ring-1 ring-gray-300/20"
+                         data-aos="zoom-in"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- 🟢 Sección Automatización Inteligente -->
+        <section class="bg-gradient-to-b from-white to-green-50 py-20" id="product">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-center">
+
+                <!-- Texto -->
+                <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-emerald-700 mb-6">Automatización Inteligente</h2>
+                    <p class="text-lg sm:text-xl text-gray-700 mb-6 leading-relaxed">
+                        Nuestro sistema combina sensores de última generación con control automatizado para garantizar un crecimiento eficiente y sostenible.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow hover:bg-emerald-700 transition">Eficiencia</span>
+                        <span class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow hover:bg-emerald-700 transition">Automatización</span>
+                        <span class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow hover:bg-emerald-700 transition">Monitoreo</span>
+                    </div>
+                    <a href="#contact" class="inline-block bg-emerald-600 text-white py-3 px-6 rounded-full shadow hover:bg-emerald-700 transition text-base font-semibold">
+                        Solicita más información
+                    </a>
+                </div>
+
+                <!-- Imagen principal -->
+                <div class="relative" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                    <img id="mainImage" src="sources/3.jpg" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover transition-all duration-500">
+                </div>
+
+                <!-- Galería lateral y descripción -->
+                <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Tecnologías Usadas</h4>
+                    <div class="flex gap-4 mb-6">
+                        <img src="sources/3.jpg" onclick="changeMainImage(this)" class="cursor-pointer w-32 h-32 object-cover rounded-xl shadow-lg hover:ring-4 ring-emerald-400 transition-all duration-300">
+                        <img src="sources/4.png" onclick="changeMainImage(this)" class="cursor-pointer w-32 h-32 object-cover rounded-xl shadow-lg hover:ring-4 ring-emerald-400 transition-all duration-300">
+                        <img src="sources/6.png" onclick="changeMainImage(this)" class="cursor-pointer w-32 h-32 object-cover rounded-xl shadow-lg hover:ring-4 ring-emerald-400 transition-all duration-300">
+                    </div>
+                    <ul class="text-base sm:text-lg space-y-3 text-gray-700">
+                        <li><strong class="text-emerald-700">DHT11/DHT22:</strong> mide temperatura y humedad.</li>
+                        <li><strong class="text-emerald-700">Sensor de suelo:</strong> mide humedad del sustrato.</li>
+                        <li><strong class="text-emerald-700">LDR:</strong> ajusta la iluminación según la luz ambiental.</li>
+                        <li><strong class="text-emerald-700">Actuadores:</strong> bomba de riego y ventilador de enfriamiento.</li>
+                        <li><strong class="text-emerald-700">Arduino + Web/App:</strong> gestión remota y monitoreo desde cualquier lugar.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Sensores Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-green-800 mb-4" data-aos="fade-down">
+                    🌱 Sensores Inteligentes
+                </h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+                    Cada sensor del sistema permite monitorear y automatizar el cuidado de las plantas en tiempo real.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                    <!-- Card -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up">
+                        <div class="relative">
+                            <img src="/sources/sensor2.png" alt="Sensor temperatura y humedad" class="w-full h-56 object-cover">
+                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor DHT22</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Temperatura y Humedad Ambiental</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Permite monitorear las condiciones climáticas del invernadero.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative">
+                            <img src="/sources/sensor1.png" alt="Sensor de humedad de suelo" class="w-full h-56 object-cover">
+                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor Higrométrico</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Humedad del Suelo</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Detecta la humedad de la tierra para activar el sistema de riego automáticamente.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative">
+                            <img src="/sources/sensor3.png" alt="Sensor de luz" class="w-full h-56 object-cover">
+                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor LDR</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Sensor de Luz</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Mide la cantidad de luz para controlar la iluminación artificial cuando sea necesario.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative">
+                            <img src="/sources/sensor4.png" alt="Sensor de nivel de agua" class="w-full h-56 object-cover">
+                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor de Nivel de Agua</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Nivel de Agua</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Monitorea el nivel de agua en la tina para garantizar el suministro del sistema de riego.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Periféricos del Invernadero -->
+        <section class="py-16 bg-green-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-green-800">Periféricos de Salida</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+                    <!-- LEDs -->
+                    <div class="w-full max-w-sm group transition-transform hover:-translate-y-1 duration-300">
+                        <div class="relative overflow-hidden rounded-lg mb-4 shadow-lg h-[22rem]">
+                            <span class="absolute top-3 left-3 bg-green-600 text-white text-xs px-2 py-1 rounded">Control Lumínico</span>
+                            <img src="/sources/out2.png"
+                                 alt="LEDs de Iluminación"
+                                 class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <button class="bg-white text-green-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-green-100 transition">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-900 mb-1">LEDs de Cultivo</h3>
+                            <p class="text-gray-700 text-sm">Activados automáticamente según la luz solar, aseguran el crecimiento en condiciones óptimas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ventilador -->
+                    <div class="w-full max-w-sm group transition-transform hover:-translate-y-1 duration-300">
+                        <div class="relative overflow-hidden rounded-lg mb-4 shadow-lg h-[22rem]">
+                            <span class="absolute top-3 left-3 bg-blue-500 text-white text-xs px-2 py-1 rounded">Climatización</span>
+                            <img src="/sources/out3.png"
+                                 alt="Ventilador"
+                                 class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <button class="bg-white text-blue-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-blue-100 transition">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-900 mb-1">Ventilador</h3>
+                            <p class="text-gray-700 text-sm">Actúa cuando la temperatura supera los 30 °C, evitando el estrés térmico de las plantas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mini Bomba -->
+                    <div class="w-full max-w-sm group transition-transform hover:-translate-y-1 duration-300">
+                        <div class="relative overflow-hidden rounded-lg mb-4 shadow-lg h-[22rem]">
+                            <span class="absolute top-3 left-3 bg-teal-600 text-white text-xs px-2 py-1 rounded">Riego Automático</span>
+                            <img src="/sources/out1.png"
+                                 alt="Mini Bomba de Agua"
+                                 class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <button class="bg-white text-teal-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-teal-100 transition">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-900 mb-1">Mini Bomba de Agua</h3>
+                            <p class="text-gray-700 text-sm">Activa cuando el suelo está seco. Curvatura del caudal diseñada para un riego suave y eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#"
+                       class="inline-block py-3 px-8 border border-green-300 text-green-800 font-medium rounded-button hover:bg-green-100 transition-colors whitespace-nowrap">Ver Todo el Sistema</a>
+                </div>
+            </div>
+        </section>
+
+
+
+    <!-- Environmental Alert Banner -->
+        <!-- Sección sobre Arduino UNO -->
+        <section class="py-16 bg-green-900 text-white overflow-hidden relative">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center md:gap-x-10 animate-fade-in-up">
+
+                    <!-- Texto e Información -->
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                            Arduino UNO: El Cerebro del Invernadero 🤖
+                        </h2>
+                        <p class="text-xl text-green-100 mb-6">
+                            El sistema automatizado está controlado por un microcontrolador <strong>Arduino UNO</strong>,
+                            encargado de interpretar datos de los sensores y activar actuadores como el riego o la ventilación.
+                        </p>
+
+                        <!-- Características del Arduino -->
+                        <div class="flex gap-4 mb-8">
+                            <div class="bg-white/10 rounded-lg p-4 text-center backdrop-blur-md">
+                                <span class="block text-2xl font-bold text-white">14 pines digitales</span>
+                                <span class="text-sm text-green-200">Para conectar sensores y relés</span>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4 text-center backdrop-blur-md">
+                                <span class="block text-2xl font-bold text-white">6 entradas analógicas</span>
+                                <span class="text-sm text-green-200">Lectura precisa de señales</span>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4 text-center backdrop-blur-md">
+                                <span class="block text-2xl font-bold text-white">Código abierto</span>
+                                <span class="text-sm text-green-200">Fácil de programar y adaptar</span>
+                            </div>
+                        </div>
+
+                        <!-- Botón de acción -->
+                        <a href="#arduino"
+                           class="inline-block py-3 px-8 bg-white text-green-900 font-medium rounded-button hover:bg-green-100 transition-colors shadow-lg whitespace-nowrap">
+                            Saber más sobre Arduino
+                        </a>
+                    </div>
+
+                    <!-- Imagen ilustrativa -->
+                    <div class="md:w-1/2 relative md:pl-10">
+                        <img src="/sources/R.png"
+                             alt="Arduino UNO controlando el sistema"
+                             class="rounded-lg w-full shadow-xl border-4 border-white/10 animate-pulse-slow" />
+                        <div class="absolute inset-0 bg-green-500 opacity-10 rounded-lg animate-ping-slow pointer-events-none"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    <!-- Componentes Destacados -->
+    <section class="py-16 bg-gradient-to-b from-green-50 to-green-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-center text-green-800 mb-16 animate-fade-in-up">
+                Componentes Clave del Invernadero Inteligente
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Card: Transistor 2N2222 -->
+                <div onclick="openModal('modalTransistor')" class="cursor-pointer bg-white rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-green-300">
+                    <img src="/sources/trans.png" alt="Transistor 2N2222"
+                         class="w-full h-56 object-contain mb-6 rounded-xl border border-green-200" />
+                    <h3 class="text-2xl font-bold text-green-700 mb-2">Transistor 2N2222</h3>
+                    <p class="text-gray-700 text-lg">Actúa como interruptor electrónico para controlar el encendido del relé. ¡Haz clic para más información!</p>
+                </div>
+
+                <!-- Card: Relé -->
+                <div onclick="openModal('modalRele')" class="cursor-pointer bg-white rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-green-300">
+                    <img src="/sources/relay.png" alt="Relé electromecánico"
+                         class="w-full h-56 object-contain mb-6 rounded-xl border border-green-200" />
+                    <h3 class="text-2xl font-bold text-green-700 mb-2">Relé Electromecánico</h3>
+                    <p class="text-gray-700 text-lg">Permite controlar cargas mayores como ventiladores o bombas. ¡Haz clic para conocer su funcionamiento!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Modal: Transistor 2N2222 -->
+    <div id="modalTransistor" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-3xl max-w-3xl w-full mx-4 p-8 relative animate-fade-in-up shadow-2xl">
+            <button onclick="closeModal('modalTransistor')" class="absolute top-4 right-6 text-3xl text-gray-500 hover:text-red-500">&times;</button>
+            <div class="flex flex-col md:flex-row gap-6">
+                <img src="/sources/trans.png"
+                     alt="Transistor 2N2222" class="w-full md:w-1/2 rounded-xl object-contain border border-green-300" />
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold text-green-700 mb-4">Transistor 2N2222</h3>
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Transistor NPN muy popular en proyectos electrónicos. En este invernadero inteligente actúa como un interruptor para activar el relé, permitiendo el control de actuadores como bombas o ventiladores.
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-600 text-base space-y-1">
+                        <li>Corriente máxima: 800 mA</li>
+                        <li>Voltaje máximo: 40 V</li>
+                        <li>Ganancia (hFE): ~100</li>
+                        <li>Ideal para aplicaciones de conmutación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Relé -->
+    <div id="modalRele" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-3xl max-w-3xl w-full mx-4 p-8 relative animate-fade-in-up shadow-2xl">
+            <button onclick="closeModal('modalRele')" class="absolute top-4 right-6 text-3xl text-gray-500 hover:text-red-500">&times;</button>
+            <div class="flex flex-col md:flex-row gap-6">
+                <img src="/sources/relay.png"
+                     alt="Relé Electromecánico" class="w-full md:w-1/2 rounded-xl object-contain border border-green-300" />
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold text-green-700 mb-4">Relé Electromecánico</h3>
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Dispositivo electromecánico que permite controlar dispositivos de alto voltaje mediante una señal de bajo voltaje. En este proyecto se utiliza para activar bombas, ventiladores o iluminación LED.
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-600 text-base space-y-1">
+                        <li>Tensión de activación: 5V DC</li>
+                        <li>Capacidad de carga: hasta 10A 250V</li>
+                        <li>Aislamiento entre control y carga</li>
+                        <li>Seguridad y eficiencia en automatización</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="modal fade" id="codigoModal" tabindex="-1" aria-labelledby="codigoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="codigoModalLabel">Código Arduino</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body bg-light p-4 rounded">
+                        <pre class="code-font"><code>// Encender bomba si temperatura supera 30°C
+#include <DHT.h>
+
+// === Pines ===
+#define DHTPIN 11
+#define DHTTYPE DHT11
+#define FAN_PIN 2
+#define RELAY_PIN 7
+#define SOIL_PIN A0
+#define BUTTON_PIN 4
+#define LIGHTBOMB_PIN 8 
+#define LIGHT_PIN 10  // corregido de "PIN_LIGHT"
+
+// === Umbrales ===
+const float TEMP_THRESHOLD = 30.0;
+const int DRY_THRESHOLD = 500;
+const int WET_THRESHOLD = 300;
+const unsigned long MANUAL_PUMP_DURATION = 15000; // 15 segundos
+
+// === Estados ===
+bool manualPumpActive = false;
+bool manualFanActive = false;
+bool pumpActiveBySoil = false;
+unsigned long pumpStartTime = 0;
+
+DHT dht(DHTPIN, DHTTYPE);
+
+// === Funciones auxiliares ===
+void activarBomba() {
+  digitalWrite(RELAY_PIN, HIGH);
+  digitalWrite(LIGHTBOMB_PIN, HIGH);
+}
+
+void desactivarBomba() {
+  digitalWrite(RELAY_PIN, LOW);
+  digitalWrite(LIGHTBOMB_PIN, LOW);
+}
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+
+  pinMode(FAN_PIN, OUTPUT);
+  pinMode(RELAY_PIN, OUTPUT);
+  pinMode(LIGHTBOMB_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+
+  // Inicializa en estado apagado
+  digitalWrite(FAN_PIN, LOW);
+  desactivarBomba();
+}
+
+void loop() {
+  // === Procesar comandos desde el puerto serial ===
+  if (Serial.available()) {
+    String command = Serial.readStringUntil('\n');
+    command.trim();
+
+    //Condición para encender la Bomba Manual
+    if (command == "BOMBA") {
+      manualPumpActive = true;
+      pumpStartTime = millis();
+      activarBomba();
+      Serial.println("COMANDO: Bomba ENCENDIDA manualmente");
+    }
+    //Condición para encender el Ventilador Manual
+    else if (command == "VENTILADOR") {
+      manualFanActive = true;
+      digitalWrite(FAN_PIN, HIGH);
+      Serial.println("COMANDO: Ventilador ENCENDIDO");
+    }
+    //Condición para apagar el Ventilador Manual
+    else if (command == "VENTILADOR_OFF") {
+      manualFanActive = false;
+      digitalWrite(FAN_PIN, LOW);
+      Serial.println("COMANDO: Ventilador APAGADO");
+    }
+    //Condición para encender las LEDs Manual
+    else if (command == "LUCES") {
+      digitalWrite(LIGHT_PIN, HIGH);
+      Serial.println("COMANDO: Luces ENCENDIDAS");
+    }
+    //Condición para apagar las LEDs Manual
+    else if (command == "LUCES_OFF") {
+      digitalWrite(LIGHT_PIN, LOW);
+      Serial.println("COMANDO: Luces APAGADAS");
+    }
+    else {
+      Serial.println("COMANDO DESCONOCIDO: " + command);
+    }
+  }
+
+  // === Lectura de temperatura y control del ventilador ===
+  float temp = dht.readTemperature();
+  if (!isnan(temp)) {
+    Serial.print("Temperatura actual: ");
+    Serial.print(temp);
+    Serial.println(" °C");
+
+   if (!manualFanActive) {
+    if (temp >= TEMP_THRESHOLD) {
+      digitalWrite(FAN_PIN, HIGH);
+      Serial.println("→ Ventilador ENCENDIDO (Auto)");
+    } else {
+      digitalWrite(FAN_PIN, LOW);
+      Serial.println("→ Ventilador APAGADO (Auto)");
+    }
+  }
+  } else {
+    Serial.println("Error leyendo temperatura");
+  }
+
+  // === Botón manual para activar bomba ===
+  if (digitalRead(BUTTON_PIN) == LOW && !manualPumpActive) {
+    manualPumpActive = true;
+    pumpStartTime = millis();
+    activarBomba();
+    Serial.println("BOTÓN: Bomba ENCENDIDA (8s)");
+  }
+
+  if (manualPumpActive && millis() - pumpStartTime >= MANUAL_PUMP_DURATION) {
+    desactivarBomba();
+    manualPumpActive = false;
+    Serial.println("Bomba manualmente APAGADA");
+  }
+
+  // === Control automático por humedad del suelo ===
+  if (!manualPumpActive) {
+    int soilValue = analogRead(SOIL_PIN);
+    Serial.print("Valor humedad del suelo: ");
+    Serial.println(soilValue);
+
+    if (!pumpActiveBySoil && soilValue > DRY_THRESHOLD) {
+      pumpActiveBySoil = true;
+      activarBomba();
+      Serial.println("→ Suelo seco: Bomba ENCENDIDA");
+    }
+
+    if (pumpActiveBySoil && soilValue <= WET_THRESHOLD) {
+      pumpActiveBySoil = false;
+      desactivarBomba();
+      Serial.println("→ Suelo húmedo: Bomba APAGADA");
+    }
+  }
+
+  Serial.println("-------------------------");
+  delay(1000);
+}
+
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script>
+        function openModal(id) {
+          document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+          document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+
+
+<!-- Animaciones personalizadas -->
+    <!-- Scripts -->
+    <script id="headerInteractions">
+        document.addEventListener("DOMContentLoaded", function () {
+          // Search Toggle
+          const searchToggle = document.getElementById("searchToggle");
+          const searchDropdown = document.getElementById("searchDropdown");
+
+          if (searchToggle && searchDropdown) {
+            searchToggle.addEventListener("click", function () {
+              searchDropdown.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+              if (
+                !searchToggle.contains(event.target) &&
+                !searchDropdown.contains(event.target)
+              ) {
+                searchDropdown.classList.add("hidden");
+              }
+            });
+          }
+
+          // Cart Toggle
+          const cartToggle = document.getElementById("cartToggle");
+          const cartDropdown = document.getElementById("cartDropdown");
+
+          if (cartToggle && cartDropdown) {
+            cartToggle.addEventListener("click", function () {
+              cartDropdown.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+              if (
+                !cartToggle.contains(event.target) &&
+                !cartDropdown.contains(event.target)
+              ) {
+                cartDropdown.classList.add("hidden");
+              }
+            });
+          }
+
+          // Mobile Menu Toggle
+          const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+          const mobileMenu = document.getElementById("mobileMenu");
+
+          if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener("click", function () {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+
+          // Mobile Shop Menu Toggle
+          const mobileShopToggle = document.getElementById("mobileShopToggle");
+          const mobileShopMenu = document.getElementById("mobileShopMenu");
+
+          if (mobileShopToggle && mobileShopMenu) {
+            mobileShopToggle.addEventListener("click", function () {
+              mobileShopMenu.classList.toggle("hidden");
+            });
+          }
+        });
+
+
+ 
+
+    </script>
+    <!-- Scripts -->
+    <script>
+        AOS.init();
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.classList.add('opacity-0');
+            setTimeout(() => {
+                mainImage.src = thumbnail.src;
+                mainImage.classList.remove('opacity-0');
+            }, 200);
+        }
+    </script>
+</body>
+</html>
+

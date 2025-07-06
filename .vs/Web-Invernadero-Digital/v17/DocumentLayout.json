@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ing Jeremy\\Desktop\\Digital II\\Web-Invernadero-Digital\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0131FF0A-D4E1-44EA-958E-822499AB1AF8}|Web-Invernadero-Digital\\Web-Invernadero-Digital.csproj|c:\\users\\ing jeremy\\desktop\\digital ii\\web-invernadero-digital\\web-invernadero-digital\\views\\controlcenter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0131FF0A-D4E1-44EA-958E-822499AB1AF8}|Web-Invernadero-Digital\\Web-Invernadero-Digital.csproj|solutionrelative:web-invernadero-digital\\views\\controlcenter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0131FF0A-D4E1-44EA-958E-822499AB1AF8}|Web-Invernadero-Digital\\Web-Invernadero-Digital.csproj|c:\\users\\ing jeremy\\desktop\\digital ii\\web-invernadero-digital\\web-invernadero-digital\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0131FF0A-D4E1-44EA-958E-822499AB1AF8}|Web-Invernadero-Digital\\Web-Invernadero-Digital.csproj|solutionrelative:web-invernadero-digital\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\Digital II\\Web-Invernadero-Digital\\Web-Invernadero-Digital\\Views\\ControlCenter\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web-Invernadero-Digital\\Views\\ControlCenter\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\Digital II\\Web-Invernadero-Digital\\Web-Invernadero-Digital\\Views\\ControlCenter\\Index.cshtml",
+              "RelativeToolTip": "Web-Invernadero-Digital\\Views\\ControlCenter\\Index.cshtml",
+              "ViewState": "AgIAAFcCAAAAAAAAAAAYwF8CAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T00:59:16.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\Digital II\\Web-Invernadero-Digital\\Web-Invernadero-Digital\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web-Invernadero-Digital\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\Digital II\\Web-Invernadero-Digital\\Web-Invernadero-Digital\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web-Invernadero-Digital\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T00:54:33.981Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
