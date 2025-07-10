@@ -8,19 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- Google Fonts: Lato y Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-<!-- Google Fonts: Lato y Open Sans -->
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<!-- AOS Animations -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<!-- Inicializa AOS en tu script -->
-<script>
-  AOS.init();
-</script>
-
+    <!-- Inicializa AOS en tu script -->
+    <script>
+      AOS.init();
+    </script>
 
     <style>
         .scroll-table-container {
@@ -28,7 +26,83 @@
             overflow-y: auto;
         }
 
+        /* Aplicar animaciones */
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite;
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 10s linear infinite;
+        }
+
+        .animate-spin-slow-reverse {
+            animation: spin-slow-reverse 10s linear infinite;
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease forwards;
+        }
+
+        /* Borde lateral con patrón mejorado */
+        .card-plant-border {
+            position: relative;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+            padding: 1.5rem 2rem 1.5rem 4rem; /* más espacio para borde lateral */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+            .card-plant-border:hover {
+                transform: scale(1.07);
+                box-shadow: 0 12px 30px rgb(0 128 0 / 0.3);
+            }
+
+            /* Borde lateral con SVG repetido, con hojas más grandes y más verde */
+            .card-plant-border::before {
+                content: "";
+                position: absolute;
+                top: 1.5rem;
+                bottom: 1.5rem;
+                left: 1rem;
+                width: 10px;
+                border-radius: 8px;
+                background-image: url('data:image/svg+xml;utf8,<svg fill="%23005000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C10 5 7 9 5 14 7 11 10 8 13 7c-2 3-2 7-1 10 2-5 4-9 7-12-3 2-6 4-7 7"/></svg>');
+                background-repeat: repeat-y;
+                background-position: center;
+                background-size: 24px 48px;
+                filter: drop-shadow(0 0 1px #004400);
+                animation: plantBorderMove 6s linear infinite;
+            }
+
+       
+
+        /* Iconos tamaño */
+        .icon-large {
+            font-size: 4rem;
+        }
+
+        /* Botones con efecto */
+        button {
+            cursor: pointer;
+        }
+
+        /* Añadir transición a los textos para suavizar la interacción */
+        .card-plant-border h5,
+        .card-plant-border h3,
+        .card-plant-border p {
+            transition: color 0.3s ease;
+        }
+
+        .card-plant-border:hover h5,
+        .card-plant-border:hover h3,
+        .card-plant-border:hover p {
+            color: #064e03; /* verde oscuro más marcado */
+        }
+
     </style>
+
 </head>
 <body>
     <div class="container-fluid p-4">
@@ -47,65 +121,120 @@
 
             <!-- Imagen representativa -->
             <div class="flex-1 flex justify-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2900/2900654.png" alt="Invernadero" class="w-64 h-64 object-contain" />
+                <img src="https://cdn-icons-png.flaticon.com/512/3807/3807401.png" alt="Invernadero" class="w-64 h-64 object-contain" />
             </div>
         </section>
 
 
-        <section class="max-w-7xl mx-auto px-4 py-12" id="componentes">
+        <section class="max-w-7xl mx-auto px-6 py-16" id="componentes">
             <!-- Título -->
-            <div class="flex items-center gap-3 mb-8" data-aos="fade-right">
-                <i class="fas fa-leaf text-green-600 text-3xl"></i>
-                <h2 class="text-3xl font-bold text-green-800">Componentes del Sistema</h2>
+            <div class="flex items-center gap-4 mb-12" data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                <i class="fas fa-leaf text-green-700 text-4xl animate-bounce"></i>
+                <h2 class="text-4xl font-extrabold text-green-900 tracking-wide drop-shadow-md">Componentes del Sistema</h2>
             </div>
 
             <!-- Grid de componentes -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Sensor temperatura/humedad -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up">
-                    <i class="fas fa-thermometer-half text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sensor de Temperatura y Humedad</h3>
-                    <p class="text-green-700">Monitorea el ambiente del invernadero para mantener condiciones ideales de cultivo.</p>
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card template -->
+                <article class="relative bg-white rounded-3xl p-8 border-l-8 border-green-600 shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                         data-aos="fade-up"
+                         data-aos-duration="700"
+                         data-aos-easing="ease-in-out">
+                    <div class="flex items-center mb-5">
+                        <i class="fas fa-thermometer-half text-5xl text-green-600 mr-5"></i>
+                        <h3 class="text-2xl font-semibold text-green-900">Sensor de Temperatura y Humedad</h3>
+                    </div>
+                    <p class="text-green-800 leading-relaxed text-lg">
+                        Monitorea el ambiente del invernadero para mantener condiciones ideales de cultivo.
+                    </p>
+                    <span class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-30 animate-pulse"
+                          aria-hidden="true"></span>
+                </article>
 
-                <!-- Sensor de humedad del suelo -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-tint text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sensor de Humedad del Suelo</h3>
-                    <p class="text-green-700">Detecta el nivel de humedad del suelo para activar el sistema de riego automáticamente.</p>
-                </div>
+                <article class="relative bg-white rounded-3xl p-8 border-l-8 border-green-600 shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                         data-aos="fade-up"
+                         data-aos-delay="100"
+                         data-aos-duration="700"
+                         data-aos-easing="ease-in-out">
+                    <div class="flex items-center mb-5">
+                        <i class="fas fa-tint text-5xl text-green-600 mr-5"></i>
+                        <h3 class="text-2xl font-semibold text-green-900">Sensor de Humedad del Suelo</h3>
+                    </div>
+                    <p class="text-green-800 leading-relaxed text-lg">
+                        Detecta el nivel de humedad del suelo para activar el sistema de riego automáticamente.
+                    </p>
+                    <span class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-30 animate-pulse"
+                          aria-hidden="true"></span>
+                </article>
 
-                <!-- Sensor de luz -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-sun text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sensor de Luz</h3>
-                    <p class="text-green-700">Mide la intensidad luminosa y permite activar LEDs suplementarios si es necesario.</p>
-                </div>
+                <article class="relative bg-white rounded-3xl p-8 border-l-8 border-green-600 shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                         data-aos="fade-up"
+                         data-aos-delay="200"
+                         data-aos-duration="700"
+                         data-aos-easing="ease-in-out">
+                    <div class="flex items-center mb-5">
+                        <i class="fas fa-sun text-5xl text-green-600 mr-5"></i>
+                        <h3 class="text-2xl font-semibold text-green-900">Sensor de Luz</h3>
+                    </div>
+                    <p class="text-green-800 leading-relaxed text-lg">
+                        Mide la intensidad luminosa y permite activar LEDs suplementarios si es necesario.
+                    </p>
+                    <span class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-30 animate-pulse"
+                          aria-hidden="true"></span>
+                </article>
 
-                <!-- Ventilador automático -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-fan text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Ventilador de Enfriamiento</h3>
-                    <p class="text-green-700">Se activa para mantener la temperatura bajo control y prevenir el sobrecalentamiento.</p>
-                </div>
+                <article class="relative bg-white rounded-3xl p-8 border-l-8 border-green-600 shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                         data-aos="fade-up"
+                         data-aos-delay="300"
+                         data-aos-duration="700"
+                         data-aos-easing="ease-in-out">
+                    <div class="flex items-center mb-5">
+                        <i class="fas fa-fan text-5xl text-green-600 mr-5"></i>
+                        <h3 class="text-2xl font-semibold text-green-900">Ventilador de Enfriamiento</h3>
+                    </div>
+                    <p class="text-green-800 leading-relaxed text-lg">
+                        Se activa para mantener la temperatura bajo control y prevenir el sobrecalentamiento.
+                    </p>
+                    <span class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-30 animate-pulse"
+                          aria-hidden="true"></span>
+                </article>
 
-                <!-- Bomba de riego -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-water text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Bomba de Riego</h3>
-                    <p class="text-green-700">Actúa cuando el sensor detecta que el suelo está seco, garantizando riego oportuno.</p>
-                </div>
+                <article class="relative bg-white rounded-3xl p-8 border-l-8 border-green-600 shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                         data-aos="fade-up"
+                         data-aos-delay="400"
+                         data-aos-duration="700"
+                         data-aos-easing="ease-in-out">
+                    <div class="flex items-center mb-5">
+                        <i class="fas fa-water text-5xl text-green-600 mr-5"></i>
+                        <h3 class="text-2xl font-semibold text-green-900">Bomba de Riego</h3>
+                    </div>
+                    <p class="text-green-800 leading-relaxed text-lg">
+                        Actúa cuando el sensor detecta que el suelo está seco, garantizando riego oportuno.
+                    </p>
+                    <span class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-30 animate-pulse"
+                          aria-hidden="true"></span>
+                </article>
 
-                <!-- Módulo Arduino -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-microchip text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Módulo Arduino</h3>
-                    <p class="text-green-700">Unidad de control central que recibe datos de sensores y ejecuta acciones automáticas.</p>
-                </div>
+                <article class="relative bg-white rounded-3xl p-8 border-l-8 border-green-600 shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                         data-aos="fade-up"
+                         data-aos-delay="500"
+                         data-aos-duration="700"
+                         data-aos-easing="ease-in-out">
+                    <div class="flex items-center mb-5">
+                        <i class="fas fa-microchip text-5xl text-green-600 mr-5"></i>
+                        <h3 class="text-2xl font-semibold text-green-900">Módulo Arduino</h3>
+                    </div>
+                    <p class="text-green-800 leading-relaxed text-lg">
+                        Unidad de control central que recibe datos de sensores y ejecuta acciones automáticas.
+                    </p>
+                    <span class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full opacity-30 animate-pulse"
+                          aria-hidden="true"></span>
+                </article>
             </div>
         </section>
 
-        <!-- Cabecera -->
+
+       @*  <!-- Cabecera -->
         <div class="welcome-section p-5 mb-4 rounded-3 shadow-sm d-flex flex-column flex-lg-row align-items-center justify-content-between" style="background: #e6f4ea;">
             <div class="text-section mb-4 mb-lg-0">
                 <h2 class="fw-bold text-success">¡Bienvenido de nuevo, tu dashboard está listo! 🌱</h2>
@@ -115,10 +244,10 @@
             <div class="img-section text-center">
                 <img src="https://cdn.dribbble.com/users/149253/screenshots/15436094/media/7aa15c865e2f046844d9b01f65f7f2c2.png" class="img-fluid" style="max-width: 420px;">
             </div>
-        </div>
+        </div> *@
 
         <!-- Estadísticas principales -->
-        <div class="row mb-4">
+        @* <div class="row mb-4">
             <div class="col-md-6 mb-3">
                 <div class="card stat-card">
                     <div class="card-body d-flex justify-content-between align-items-center">
@@ -141,7 +270,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
 
         <!-- Gráficas -->
      @*    <div class="row mb-4">
@@ -158,6 +287,51 @@
                 </div>
             </div>
         </div> *@
+
+        <section class="my-10 px-6 md:px-20" style="font-family: 'Lato', sans-serif;">
+            <h3 class="text-3xl font-extrabold text-green-800 mb-8 flex items-center gap-3" data-aos="fade-down">
+                <i class="fas fa-chart-bar text-green-600 text-3xl animate-pulse"></i> Monitoreo en Vivo
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Eficiencia del Motor -->
+                <div class="card-plant-border text-center animate-fade-in-up" style="font-family: 'Open Sans', sans-serif;" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-cogs text-yellow-600 icon-large animate-spin-slow"></i>
+                    <h5 class="mt-5 text-xl font-bold text-gray-900">Eficiencia del Motor</h5>
+                    <h3 class="text-green-700 font-extrabold text-4xl mt-2" id="motorEfficiency">95%</h3>
+                    <p class="text-gray-700 mt-3 max-w-xs mx-auto">El motor se encuentra funcionando correctamente.</p>
+                    <button class="mt-6 px-6 py-2 border-2 border-green-700 text-green-700 font-semibold rounded-full hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                            data-bs-toggle="modal" data-bs-target="#modalMotor">
+                        Ver detalles
+                    </button>
+                </div>
+
+                <!-- Temperatura -->
+                <div class="card-plant-border text-center animate-fade-in-up" style="font-family: 'Open Sans', sans-serif;" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-thermometer-half text-red-600 icon-large animate-pulse-slow"></i>
+                    <h5 class="mt-5 text-xl font-bold text-gray-900">Temperatura</h5>
+                    <h3 class="text-blue-700 font-extrabold text-4xl mt-2" id="temperatureValue">-- °C</h3>
+                    <p class="text-gray-700 mt-3 max-w-xs mx-auto">Temperatura dentro del rango óptimo.</p>
+                    <button class="mt-6 px-6 py-2 border-2 border-blue-700 text-blue-700 font-semibold rounded-full hover:bg-blue-700 hover:text-white transition duration-300 transform hover:scale-105"
+                            data-bs-toggle="modal" data-bs-target="#modalTemp">
+                        Ver detalles
+                    </button>
+                </div>
+
+                <!-- Luz Ambiental -->
+                <div class="card-plant-border text-center animate-fade-in-up" style="font-family: 'Open Sans', sans-serif;" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-sun text-yellow-500 icon-large animate-spin-slow-reverse"></i>
+                    <h5 class="mt-5 text-xl font-bold text-gray-900">Luz Ambiental</h5>
+                    <h3 class="text-gray-700 font-extrabold text-4xl mt-2" id="lightStatus">--</h3>
+                    <p class="text-gray-700 mt-3 max-w-xs mx-auto">Iluminación natural detectada.</p>
+                    <button class="mt-6 px-6 py-2 border-2 border-yellow-500 text-yellow-500 font-semibold rounded-full hover:bg-yellow-500 hover:text-white transition duration-300 transform hover:scale-105"
+                            data-bs-toggle="modal" data-bs-target="#modalLuz">
+                        Ver detalles
+                    </button>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Sección de Gráficas con TailwindCSS -->
         <section id="recopilacion-datos" class="w-full py-16 bg-white" data-aos="fade-up">
@@ -187,61 +361,6 @@
             </div>
         </section>
 
-        <section class="my-5 px-3 px-md-5">
-            <!-- Sección Monitoreo -->
-            <h3 class="text-success mb-4" style="font-family: 'Lato', sans-serif;">📊 Monitoreo en Vivo</h3>
-
-            <div class="row g-4">
-                <!-- Eficiencia del Motor -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow rounded-4 p-3" style="font-family: 'Open Sans', sans-serif;">
-                        <div class="text-center">
-                            <i class="fas fa-cogs text-warning" style="font-size: 48px;"></i>
-                            <h5 class="mt-3 fw-bold">Eficiencia del Motor</h5>
-                            <h3 class="text-success fw-bold" id="motorEfficiency">95%</h3>
-                            <p class="text-muted">El motor se encuentra funcionando correctamente.</p>
-                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalMotor">
-                                Ver detalles
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Temperatura -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow rounded-4 p-3" style="font-family: 'Open Sans', sans-serif;">
-                        <div class="text-center">
-                            <i class="fas fa-thermometer-half text-danger" style="font-size: 48px;"></i>
-                            <h5 class="mt-3 fw-bold">Temperatura</h5>
-                            <h3 class="text-primary fw-bold" id="temperatureValue">-- °C</h3>
-                            <p class="text-muted">Temperatura dentro del rango óptimo.</p>
-                            <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalTemp">
-                                Ver detalles
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Luz Ambiental -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow rounded-4 p-3" style="font-family: 'Open Sans', sans-serif;">
-                        <div class="text-center">
-                            <i class="fas fa-sun text-warning" style="font-size: 48px;"></i>
-                            <h5 class="mt-3 fw-bold">Luz Ambiental</h5>
-                            <h3 class="text-secondary fw-bold" id="lightStatus">--</h3>
-                            <p class="text-muted">Iluminación natural detectada.</p>
-                            <button class="btn btn-outline-warning btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalLuz">
-                                Ver detalles
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
         <!-- Contenedor fijo con scroll vertical -->
      @*    <h4 class="text-success">Registro de Monitoreo</h4>
         <div class="scroll-table-container">
@@ -259,176 +378,229 @@
                 </tbody>
             </table>
         </div> *@
+
         <!-- Sección de tabla de monitoreo -->
         <section class="w-full py-16 bg-white font-lato" data-aos="fade-up">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- Encabezado -->
-                <div class="flex flex-wrap justify-between items-center mb-8">
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-database text-green-600 text-2xl"></i>
-                        <div>
-                            <h4 class="text-2xl font-bold text-green-700">📈 Registro de Monitoreo</h4>
-                            <p class="text-sm text-gray-500">Actualizado en tiempo real</p>
-                        </div>
-                    </div>
-
-                    <!-- Buscador -->
-                    <div class="relative w-full sm:w-64 mt-4 sm:mt-0">
-                        <input type="text" placeholder="🔍 Buscar sensor..." class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" />
-                        <span class="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400">
-                            <i class="fas fa-search"></i>
-                        </span>
+            <!-- Encabezado -->
+            <div class="flex flex-wrap justify-between items-center mb-8">
+                <div class="flex items-center gap-3">
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-green-700">📈 Registro de Monitoreo</h4>
                     </div>
                 </div>
 
-                <!-- Tabla de monitoreo -->
-                <div class="overflow-x-auto max-h-[420px] overflow-y-scroll rounded-xl border border-gray-200 shadow-lg">
-                    <table class="min-w-full table-auto text-sm text-left">
-                        <thead class="bg-green-600 text-white sticky top-0 z-10">
-                            <tr>
-                                <th class="p-4"><i class="far fa-clock mr-1"></i>Fecha y Hora</th>
-                                <th class="p-4"><i class="fas fa-microchip mr-1"></i>Sensor</th>
-                                <th class="p-4"><i class="fas fa-chart-line mr-1"></i>Valor</th>
-                                <th class="p-4"><i class="fas fa-info-circle mr-1"></i>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody id="logTableBody">
-                            <!-- Fila Normal -->
-                            <tr class="hover:bg-green-50 transition duration-300 ease-in-out">
-                                <td class="p-4 text-gray-700">2025-06-14 10:22</td>
-                                <td class="p-4 text-gray-700">🌡️ Temperatura</td>
-                                <td class="p-4 text-gray-700">31°C</td>
-                                <td class="p-4">
-                                    <span class="inline-block px-3 py-1 text-xs font-bold rounded-full bg-green-100 text-green-700 animate-pulse shadow-sm">
-                                        Normal
-                                    </span>
-                                </td>
-                            </tr>
-                            <!-- Fila Alerta -->
-                            <tr class="hover:bg-red-50 transition duration-300 ease-in-out">
-                                <td class="p-4 text-gray-700">2025-06-14 10:23</td>
-                                <td class="p-4 text-gray-700">💧 Humedad Suelo</td>
-                                <td class="p-4 text-gray-700">12%</td>
-                                <td class="p-4">
-                                    <span class="inline-block px-3 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 animate-pulse shadow-sm">
-                                        Alerta
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <!-- Buscador -->
+                @* <div class="relative w-full sm:w-64 mt-4 sm:mt-0">
+                    <input type="text" placeholder="🔍 Buscar sensor..." class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" />
+                    <span class="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div> *@
+            </div>
+
+            <!-- Tabla de monitoreo -->
+            <div class="overflow-x-auto max-h-[420px] overflow-y-scroll rounded-xl border border-gray-200 shadow-lg">
+                <table class="min-w-full table-auto text-sm text-left">
+                    <thead class="bg-green-600 text-white sticky top-0 z-10 text-base font-semibold">
+                        <tr>
+                            <th class="p-4"><i class="far fa-clock mr-2 text-lg"></i>Fecha y Hora</th>
+                            <th class="p-4"><i class="fas fa-microchip mr-2 text-lg"></i>Sensor</th>
+                            <th class="p-4"><i class="fas fa-chart-line mr-2 text-lg"></i>Valor</th>
+                            <th class="p-4"><i class="fas fa-info-circle mr-2 text-lg"></i>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logTableBody">
+                        <!-- Fila Normal -->
+                        <tr class="hover:bg-green-50 transition duration-300 ease-in-out">
+                            <td class="p-4 text-gray-700">2025-06-14 10:22</td>
+                            <td class="p-4 text-gray-700">🌡️ Temperatura</td>
+                            <td class="p-4 text-gray-700">31°C</td>
+                            <td class="p-4">
+                                <span class="inline-block px-3 py-1 text-xs font-bold rounded-full bg-green-100 text-green-700 animate-pulse shadow-sm">
+                                    Normal
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Fila Alerta -->
+                        <tr class="hover:bg-red-50 transition duration-300 ease-in-out">
+                            <td class="p-4 text-gray-700">2025-06-14 10:23</td>
+                            <td class="p-4 text-gray-700">💧 Humedad Suelo</td>
+                            <td class="p-4 text-gray-700">12%</td>
+                            <td class="p-4">
+                                <span class="inline-block px-3 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 animate-pulse shadow-sm">
+                                    Alerta
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
 
-        <!-- Controles Manuales -->
-        <h3 class="text-success mt-5 mb-4 fw-bold" id="controles">
-            🎛️ Controles Manuales
-        </h3>
-        <div class="row g-4">
 
-            <!-- Luces -->
-            <div class="col-md-4">
-                <div class="card shadow-lg border-0 rounded-4 bg-light h-100">
-                    <div class="card-header bg-success text-white rounded-top-4 d-flex align-items-center gap-2">
-                        <i class="fas fa-lightbulb fa-lg"></i> <span class="fw-semibold">Luces</span>
-                    </div>
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <div class="d-grid gap-3">
-                            <button class="btn btn-success btn-lg rounded-pill" onclick="sendCommand('luces/on')">
+        <!-- Sección Controles Manuales -->
+        <section class="w-full bg-green-50 py-12 px-6 sm:px-12 lg:px-24 rounded-xl shadow-inner">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl font-extrabold text-green-900 flex items-center gap-3 mb-10 animate-fade-in" id="controles">
+                    <i class="fas fa-sliders-h text-green-700 text-3xl"></i>
+                    Controles Manuales
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Luces -->
+                    <div class="bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-between hover:scale-105 transition-transform duration-300 cursor-pointer"
+                         onclick="sendCommand('luces/on')"
+                         role="button"
+                         tabindex="0"
+                         aria-label="Control de Luces">
+                        <div>
+                            <div class="flex items-center gap-4 mb-5 text-yellow-500">
+                                <i class="fas fa-lightbulb fa-2x"></i>
+                                <h4 class="text-2xl font-semibold text-gray-900">Luces</h4>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Controla el encendido y apagado de las luces de cultivo para mantener un ciclo óptimo.
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-yellow-400 hover:bg-yellow-500 text-white py-3 rounded-full font-bold shadow-md flex items-center justify-center gap-2 transition duration-300"
+                                    onclick="sendCommand('luces/on')">
                                 <i class="fas fa-play"></i> Encender
                             </button>
-                            <button class="btn btn-danger btn-lg rounded-pill" onclick="sendCommand('luces/off')">
+                            <button class="flex-1 bg-red-500 hover:bg-red-600 text-white py-3 rounded-full font-bold shadow-md flex items-center justify-center gap-2 transition duration-300"
+                                    onclick="sendCommand('luces/off')">
                                 <i class="fas fa-stop"></i> Apagar
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Ventilador -->
-            <div class="col-md-4">
-                <div class="card shadow-lg border-0 rounded-4 bg-light h-100">
-                    <div class="card-header bg-primary text-white rounded-top-4 d-flex align-items-center gap-2">
-                        <i class="fas fa-fan fa-lg"></i> <span class="fw-semibold">Ventilador</span>
-                    </div>
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <div class="d-grid gap-3">
-                            <button class="btn btn-success btn-lg rounded-pill" onclick="sendCommand('ventilador/on')">
+                    <!-- Ventilador -->
+                    <div class="bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-between hover:scale-105 transition-transform duration-300 cursor-pointer"
+                         role="button"
+                         tabindex="0"
+                         aria-label="Control del Ventilador">
+                        <div>
+                            <div class="flex items-center gap-4 mb-5 text-blue-600">
+                                <i class="fas fa-fan fa-2x"></i>
+                                <h4 class="text-2xl font-semibold text-gray-900">Ventilador</h4>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Gestiona la circulación de aire para mantener temperatura y humedad ideales.
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-full font-bold shadow-md flex items-center justify-center gap-2 transition duration-300"
+                                    onclick="sendCommand('ventilador/on')">
                                 <i class="fas fa-play"></i> Encender
                             </button>
-                            <button class="btn btn-danger btn-lg rounded-pill" onclick="sendCommand('ventilador/off')">
+                            <button class="flex-1 bg-red-500 hover:bg-red-600 text-white py-3 rounded-full font-bold shadow-md flex items-center justify-center gap-2 transition duration-300"
+                                    onclick="sendCommand('ventilador/off')">
                                 <i class="fas fa-stop"></i> Apagar
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Bomba -->
-            <div class="col-md-4">
-                <div class="card shadow-lg border-0 rounded-4 bg-light h-100">
-                    <div class="card-header bg-info text-white rounded-top-4 d-flex align-items-center gap-2">
-                        <i class="fas fa-water fa-lg"></i> <span class="fw-semibold">Bomba de Agua</span>
-                    </div>
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <button class="btn btn-info btn-lg text-white rounded-pill w-100" onclick="sendCommand('bomba')">
+                    <!-- Bomba de Agua -->
+                    <div class="bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-between hover:scale-105 transition-transform duration-300 cursor-pointer"
+                         role="button"
+                         tabindex="0"
+                         aria-label="Control de la Bomba de Agua"
+                         onclick="sendCommand('bomba')">
+                        <div>
+                            <div class="flex items-center gap-4 mb-5 text-teal-600">
+                                <i class="fas fa-water fa-2x"></i>
+                                <h4 class="text-2xl font-semibold text-gray-900">Bomba de Agua</h4>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Activa la bomba de riego por 8 segundos para mantener la humedad ideal del suelo.
+                            </p>
+                        </div>
+                        <button class="bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-full font-bold shadow-md flex items-center justify-center gap-2 transition duration-300">
                             <i class="fas fa-play"></i> Activar Bomba (8s)
                         </button>
                     </div>
+
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Modal Motor -->
-        <div class="modal fade" id="modalMotor" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-success text-white">
-                        <h5 class="modal-title">Eficiencia del Motor</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <!-- Modal Eficiencia del Motor -->
+        <div class="modal fade" id="modalMotor" tabindex="-1" aria-labelledby="modalMotorLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="font-family: 'Open Sans', sans-serif;">
+                    <div class="modal-header border-0 justify-content-center">
+                        <h5 class="modal-title text-success fw-bold" id="modalMotorLabel">Detalles de Eficiencia del Motor</h5>
+                        <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Detalles completos del funcionamiento y eficiencia del motor eléctrico...</p>
+                        <h2 id="modalMotorValue" class="text-success fw-bold text-center mb-4" style="font-size: 3rem;">95%</h2>
+                        <div class="d-flex align-items-start">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046850.png" alt="Motor icon" width="120" class="me-4" style="flex-shrink: 0;">
+                            <p class="text-justify fs-5">
+                                El motor está funcionando dentro de los parámetros óptimos, asegurando eficiencia energética y rendimiento constante.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Modal Temperatura -->
-        <div class="modal fade" id="modalTemp" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title">Temperatura Ambiental</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal fade" id="modalTemp" tabindex="-1" aria-labelledby="modalTempLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="font-family: 'Open Sans', sans-serif;">
+                    <div class="modal-header border-0 justify-content-center">
+                        <h5 class="modal-title text-primary fw-bold" id="modalTempLabel">Detalles de Temperatura</h5>
+                        <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Aquí puedes ver valores históricos o advertencias relacionadas a la temperatura.</p>
+                        <h2 id="modalTempValue" class="text-primary fw-bold text-center mb-4" style="font-size: 3rem;">-- °C</h2>
+                        <div class="d-flex align-items-start">
+                            <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Termómetro icon" width="120" class="me-4" style="flex-shrink: 0;">
+                            <p class="text-justify fs-5">
+                                La temperatura está dentro del rango ideal para el crecimiento óptimo de las plantas en el invernadero.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal Luz -->
-        <div class="modal fade" id="modalLuz" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-warning">
-                        <h5 class="modal-title">Luz Ambiental</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <!-- Modal Luz Ambiental -->
+        <div class="modal fade" id="modalLuz" tabindex="-1" aria-labelledby="modalLuzLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="font-family: 'Open Sans', sans-serif;">
+                    <div class="modal-header border-0 justify-content-center">
+                        <h5 class="modal-title text-warning fw-bold" id="modalLuzLabel">Detalles de Luz Ambiental</h5>
+                        <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Datos sobre la intensidad de luz y su impacto en el sistema de crecimiento.</p>
+                        <h2 id="modalLuzValue" class="text-warning fw-bold text-center mb-4" style="font-size: 3rem;">--</h2>
+                        <div class="d-flex align-items-start">
+                            <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="Luz icon" width="120" class="me-4" style="flex-shrink: 0;">
+                            <p class="text-justify fs-5">
+                                La luz ambiental proporciona la iluminación necesaria para la fotosíntesis y salud general de las plantas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <!-- Scripts -->
+
+     <!-- Scripts -->
         <script>
             const apiBaseUrl = "https://localhost:7139";
 
@@ -468,10 +640,17 @@
                     const data = await response.json();
                     const timestamp = new Date().toLocaleTimeString();
 
-                    document.getElementById('currTemp').innerText = data.temperatura.toFixed(1);
-                    document.getElementById('currHum').innerText = data.humedad.toFixed(1);
-                    document.getElementById('temperatureValue').innerText = `${data.temperatura.toFixed(1)} °C`;
-                    document.getElementById('lightStatus').innerText = data.luz > 200 ? "Adecuada" : "Baja";
+                    const currTempElem = document.getElementById('currTemp');
+                    if (currTempElem) currTempElem.innerText = data.temperatura.toFixed(1);
+
+                    const currHumElem = document.getElementById('currHum');
+                    if (currHumElem) currHumElem.innerText = data.humedad.toFixed(1);
+
+                    const temperatureValueElem = document.getElementById('temperatureValue');
+                    if (temperatureValueElem) temperatureValueElem.innerText = `${data.temperatura.toFixed(1)} °C`;
+
+                    const lightStatusElem = document.getElementById('lightStatus');
+                    if (lightStatusElem) lightStatusElem.innerText = data.luz > 200 ? "Adecuada" : "Baja";
 
                     pushData(tempChart, timestamp, data.temperatura);
                     pushData(humChart, timestamp, data.humedad);
@@ -495,48 +674,34 @@
                 chart.update();
             }
 
-            // function addToLog(sensor, valor, estado) {
-            //     const tbody = document.getElementById('logTableBody');
-            //     const row = `<tr><td>${new Date().toLocaleString()}</td><td>${sensor}</td><td>${valor}</td><td>${estado}</td></tr>`;
-            //     tbody.insertAdjacentHTML('afterbegin', row);
-            // }
-
-                        function addToLog(sensor, valor, estado) {
+            function addToLog(sensor, valor, estado) {
                 const tbody = document.getElementById('logTableBody');
+                if (!tbody) return;
 
                 let icon = "";
                 let bgColor = "";
                 let textColor = "";
                 let estadoLabel = "";
 
-                // Personalizar íconos y colores según el sensor
                 switch (sensor.toLowerCase()) {
-                    case 'temperatura':
-                        icon = "🌡️";
-                        break;
-                    case 'humedad':
-                        icon = "💧";
-                        break;
-                    case 'luz':
-                        icon = "💡";
-                        break;
-                    default:
-                        icon = "📟";
+                    case 'temperatura': icon = "🌡️"; break;
+                    case 'humedad': icon = "💧"; break;
+                    case 'luz': icon = "💡"; break;
+                    default: icon = "📟";
                 }
 
-                // Estilos por estado
-                if (estado.toLowerCase() === 'normal' || estado.toLowerCase() === 'óptima' || estado.toLowerCase() === 'adecuada') {
+                if (['normal', 'óptima', 'adecuada'].includes(estado.toLowerCase())) {
                     bgColor = "bg-green-100";
                     textColor = "text-green-700";
-                    estadoLabel = `<span class="inline-block px-3 py-1 text-xs font-semibold rounded-full ${bgColor} ${textColor} animate-pulse">
-                                       <i class="fas fa-check-circle mr-1"></i> ${estado}
-                                   </span>`;
+                    estadoLabel = `<span class="inline-block px-3 py-1 text-xs font-semibold rounded-full ${bgColor} ${textColor} animate-pulse shadow-sm">
+                                        <i class="fas fa-check-circle mr-1"></i> ${estado}
+                                    </span>`;
                 } else {
                     bgColor = "bg-red-100";
                     textColor = "text-red-700";
-                    estadoLabel = `<span class="inline-block px-3 py-1 text-xs font-semibold rounded-full ${bgColor} ${textColor} animate-pulse">
-                                       <i class="fas fa-exclamation-triangle mr-1"></i> ${estado}
-                                   </span>`;
+                    estadoLabel = `<span class="inline-block px-3 py-1 text-xs font-semibold rounded-full ${bgColor} ${textColor} animate-pulse shadow-sm">
+                                        <i class="fas fa-exclamation-triangle mr-1"></i> ${estado}
+                                    </span>`;
                 }
 
                 const row = `
@@ -550,603 +715,66 @@
                 tbody.insertAdjacentHTML('afterbegin', row);
             }
 
-
-            // async function sendCommand(command) {
-            //     try {
-            //         await fetch(`${apiBaseUrl}/api/Control/comando/${command}`, { method: 'POST' });
-            //         console.log(`✅ Comando enviado: ${command}`);
-            //     } catch (error) {
-            //         console.error('❌ Error al enviar comando:', error);
-            //     }
-            // }
-
-
-
-                    async function sendCommand(commandPath) {
-                      try {
-                        const response = await fetch(`${apiBaseUrl}/api/Control/${commandPath}`, {
-                          method: "POST"
-                        });
-
-                        const text = await response.text();
-                        document.getElementById('status').innerText = `Respuesta: ${text}`;
-                      } catch (error) {
-                        console.error('Error:', error);
-                        document.getElementById('status').innerText = 'Error al enviar el comando.';
-                      }
-                    }
-
-            fetchLatestSensorData();
-            setInterval(fetchLatestSensorData, 1000);
-        </script>
-</body>
-</html>
-
-
-
-
- @* <!DOCTYPE html>
-<html lang="es">
-<head>
-    <!-- Metadatos básicos -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sistema de Invernadero Inteligente controlado por Arduino y una API en .NET. Monitorea temperatura, humedad, luz y más." />
-    <meta name="theme-color" content="#34d399" />
-
-    <!-- Título de la página -->
-    <title>Invernadero Inteligente</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Google Fonts: Lato y Open Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- Iconos: Material Symbols y Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script> <!-- Reemplaza con tu Kit de FontAwesome -->
-   
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"
-
-    <!-- Estilos base personalizados (opcional) -->
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Lato', sans-serif;
-        }
-    </style>
-
-    <!-- Inicialización de AOS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          AOS.init({
-            duration: 800,
-            once: true,
-            easing: 'ease-in-out',
-          });
-        });
-    </script>
-</head>
-
-<body class="bg-white text-gray-800">
-    <!-- Contenedor principal -->
-    <div class="min-h-screen bg-white text-green-800 px-2 sm:px-4 md:px-6 lg:px-10 py-4 space-y-12 font-sans">
-
-        <section class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 px-4 py-12" data-aos="fade-up">
-            <!-- Texto de bienvenida -->
-            <div class="flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                    <i class="fas fa-seedling text-green-600 text-3xl"></i>
-                    <h1 class="text-3xl sm:text-4xl font-bold text-green-800">Bienvenido al Invernadero Inteligente</h1>
-                </div>
-                <p class="text-green-700 text-lg leading-relaxed">
-                    Este sistema automatizado monitorea y controla condiciones clave como temperatura, humedad del aire y del suelo, y luz solar, garantizando un crecimiento óptimo para tus plantas.
-                </p>
-            </div>
-
-            <!-- Imagen representativa -->
-            <div class="flex-1 flex justify-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2900/2900654.png" alt="Invernadero" class="w-64 h-64 object-contain" />
-            </div>
-        </section>
-
-
-        <section class="max-w-7xl mx-auto px-4 py-12" id="componentes">
-            <!-- Título -->
-            <div class="flex items-center gap-3 mb-8" data-aos="fade-right">
-                <i class="fas fa-leaf text-green-600 text-3xl"></i>
-                <h2 class="text-3xl font-bold text-green-800">Componentes del Sistema</h2>
-            </div>
-
-            <!-- Grid de componentes -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Sensor temperatura/humedad -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up">
-                    <i class="fas fa-thermometer-half text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sensor de Temperatura y Humedad</h3>
-                    <p class="text-green-700">Monitorea el ambiente del invernadero para mantener condiciones ideales de cultivo.</p>
-                </div>
-
-                <!-- Sensor de humedad del suelo -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-tint text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sensor de Humedad del Suelo</h3>
-                    <p class="text-green-700">Detecta el nivel de humedad del suelo para activar el sistema de riego automáticamente.</p>
-                </div>
-
-                <!-- Sensor de luz -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-sun text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sensor de Luz</h3>
-                    <p class="text-green-700">Mide la intensidad luminosa y permite activar LEDs suplementarios si es necesario.</p>
-                </div>
-
-                <!-- Ventilador automático -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-fan text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Ventilador de Enfriamiento</h3>
-                    <p class="text-green-700">Se activa para mantener la temperatura bajo control y prevenir el sobrecalentamiento.</p>
-                </div>
-
-                <!-- Bomba de riego -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-water text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Bomba de Riego</h3>
-                    <p class="text-green-700">Actúa cuando el sensor detecta que el suelo está seco, garantizando riego oportuno.</p>
-                </div>
-
-                <!-- Módulo Arduino -->
-                <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-microchip text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Módulo Arduino</h3>
-                    <p class="text-green-700">Unidad de control central que recibe datos de sensores y ejecuta acciones automáticas.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Gráficas con Bootstrap -->
-        <div class="row mb-4">
-            <div class="col-lg-6 mb-4">
-                <div class="card p-3">
-                    <h5><i class="fas fa-thermometer-half me-2"></i>Histórico de Temperatura</h5>
-                    <canvas id="tempChart1" height="200"></canvas>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card p-3">
-                    <h5><i class="fas fa-tint me-2"></i>Histórico de Humedad</h5>
-                    <canvas id="humChart1" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <!-- Gráficas con TailwindCSS -->
-        <section id="recopilacion-datos" class="w-full py-16 bg-white" data-aos="fade-up">
-            <div class="w-full mx-auto px-2 sm:px-4 lg:px-6">
-                <h2 class="text-3xl font-bold text-green-800 mb-8 flex items-center gap-2">
-                    <i class="fas fa-leaf text-green-600 text-4xl"></i>
-                    Recopilación de Datos
-                </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Temperatura -->
-                    <div class="bg-green-50 rounded-2xl shadow-md p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center gap-2">
-                            <i class="fas fa-temperature-high text-green-600"></i> Histórico de Temperatura
-                        </h3>
-                        <canvas id="tempChart2" height="200"></canvas>
-                    </div>
-
-                    <!-- Humedad -->
-                    <div class="bg-green-50 rounded-2xl shadow-md p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center gap-2">
-                            <i class="fas fa-tint text-green-600"></i> Histórico de Humedad
-                        </h3>
-                        <canvas id="humChart2" height="200"></canvas>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <section class="w-full py-16 bg-white" data-aos="fade-up">
-            <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Título -->
-                <h2 class="text-3xl font-bold text-green-800 mb-8 flex items-center gap-2 font-lato">
-                    📊 Monitoreo en Vivo
-                </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                    <!-- Eficiencia del Motor -->
-                    <div class="bg-white shadow-md rounded-3xl p-6 text-center transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-aos="zoom-in">
-                        <i class="fas fa-cogs text-yellow-500 text-5xl mb-4"></i>
-                        <h5 class="text-lg font-bold font-open">Eficiencia del Motor</h5>
-                        <h3 class="text-green-600 text-3xl font-bold" id="motorEfficiency">95%</h3>
-                        <p class="text-gray-500">El motor se encuentra funcionando correctamente.</p>
-                        <button class="mt-3 px-4 py-1 border border-green-600 text-green-600 text-sm rounded hover:bg-green-600 hover:text-white transition">
-                            Ver detalles
-                        </button>
-                    </div>
-
-                    <!-- Temperatura -->
-                    <div class="bg-white shadow-md rounded-3xl p-6 text-center transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="100">
-                        <i class="fas fa-thermometer-half text-red-500 text-5xl mb-4"></i>
-                        <h5 class="text-lg font-bold font-open">Temperatura</h5>
-                        <h3 class="text-blue-600 text-3xl font-bold" id="temperatureValue">-- °C</h3>
-                        <p class="text-gray-500">Temperatura dentro del rango óptimo.</p>
-                        <button class="mt-3 px-4 py-1 border border-blue-600 text-blue-600 text-sm rounded hover:bg-blue-600 hover:text-white transition">
-                            Ver detalles
-                        </button>
-                    </div>
-
-                    <!-- Luz Ambiental -->
-                    <div class="bg-white shadow-md rounded-3xl p-6 text-center transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fas fa-sun text-yellow-400 text-5xl mb-4"></i>
-                        <h5 class="text-lg font-bold font-open">Luz Ambiental</h5>
-                        <h3 class="text-gray-600 text-3xl font-bold" id="lightStatus">--</h3>
-                        <p class="text-gray-500">Iluminación natural detectada.</p>
-                        <button class="mt-3 px-4 py-1 border border-yellow-400 text-yellow-600 text-sm rounded hover:bg-yellow-400 hover:text-white transition">
-                            Ver detalles
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contenedor fijo con scroll vertical -->
-        <h4 class="text-success">Registro de Monitoreo</h4>
-        <div class="scroll-table-container">
-            <table class="table table-bordered table-striped w-full">
-                <thead class="sticky top-0 bg-success text-white">
-                    <tr>
-                        <th>Fecha y Hora</th>
-                        <th>Sensor</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody id="logTableBody">
-                    <!-- Filas dinámicas -->
-                </tbody>
-            </table>
-        </div>
-
-        <section class="w-full py-16 bg-white" data-aos="fade-up">
-            <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- Encabezado -->
-                <div class="flex flex-wrap justify-between items-center mb-6">
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-database text-green-600 text-2xl"></i>
-                        <div>
-                            <h4 class="text-2xl font-bold text-green-700 font-lato">📈 Registro de Monitoreo</h4>
-                            <p class="text-gray-500 text-sm">Actualizado en tiempo real</p>
-                        </div>
-                    </div>
-
-                    <!-- Input búsqueda -->
-                    <div class="relative w-full sm:w-64 mt-4 sm:mt-0">
-                        <input type="text" placeholder="🔍 Buscar sensor..." class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" />
-                        <span class="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tabla -->
-                <div class="overflow-x-auto max-h-[420px] overflow-y-scroll rounded-lg border border-gray-200">
-                    <table class="min-w-full table-auto text-sm text-left">
-                        <thead class="bg-green-600 text-white sticky top-0 z-10">
-                            <tr>
-                                <th class="p-4">
-                                    <i class="far fa-clock mr-1"></i> Fecha y Hora
-                                </th>
-                                <th class="p-4">
-                                    <i class="fas fa-microchip mr-1"></i> Sensor
-                                </th>
-                                <th class="p-4">
-                                    <i class="fas fa-chart-line mr-1"></i> Valor
-                                </th>
-                                <th class="p-4">
-                                    <i class="fas fa-info-circle mr-1"></i> Estado
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="logTableBody">
-                            <!-- Fila normal -->
-                            <tr class="hover:bg-green-50 transition-colors duration-300">
-                                <td class="p-4 text-gray-700">2025-06-14 10:22</td>
-                                <td class="p-4 text-gray-700">🌡️ Temperatura</td>
-                                <td class="p-4 text-gray-700">31°C</td>
-                                <td class="p-4">
-                                    <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700 animate-pulse">
-                                        Normal
-                                    </span>
-                                </td>
-                            </tr>
-                            <!-- Fila alerta -->
-                            <tr class="hover:bg-red-50 transition-colors duration-300">
-                                <td class="p-4 text-gray-700">2025-06-14 10:23</td>
-                                <td class="p-4 text-gray-700">💧 Humedad Suelo</td>
-                                <td class="p-4 text-gray-700">12%</td>
-                                <td class="p-4">
-                                    <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-700 animate-pulse">
-                                        Alerta
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
-
-        <!-- Controles Manuales -->
-        <section class="w-full bg-green-50 py-12 px-4 sm:px-6 lg:px-8 rounded-xl shadow-inner">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl font-bold text-green-800 flex items-center gap-3 mb-8 animate-fade-in" id="controles">
-                    <i class="fas fa-sliders-h text-green-600 text-2xl"></i> Controles Manuales
-                </h3>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                    <!-- Luces -->
-                    <div class="bg-white rounded-3xl shadow-lg p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <div class="flex items-center gap-3 mb-4 text-yellow-500">
-                                <i class="fas fa-lightbulb fa-xl"></i>
-                                <h4 class="text-xl font-semibold text-gray-800">Luces</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-6">
-                                Controla el encendido y apagado de las luces de cultivo. Ideal para mantener el ciclo de luz.
-                            </p>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <button class="bg-yellow-400 hover:bg-yellow-500 text-white py-3 rounded-full font-bold shadow-md transition duration-300" onclick="sendCommand('luces/on')">
-                                <i class="fas fa-play mr-2"></i> Encender
-                            </button>
-                            <button class="bg-red-500 hover:bg-red-600 text-white py-3 rounded-full font-bold shadow-md transition duration-300" onclick="sendCommand('luces/off')">
-                                <i class="fas fa-stop mr-2"></i> Apagar
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Ventilador -->
-                    <div class="bg-white rounded-3xl shadow-lg p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <div class="flex items-center gap-3 mb-4 text-blue-500">
-                                <i class="fas fa-fan fa-xl"></i>
-                                <h4 class="text-xl font-semibold text-gray-800">Ventilador</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-6">
-                                Gestiona la circulación de aire para controlar temperatura y humedad.
-                            </p>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-full font-bold shadow-md transition duration-300" onclick="sendCommand('ventilador/on')">
-                                <i class="fas fa-play mr-2"></i> Encender
-                            </button>
-                            <button class="bg-red-500 hover:bg-red-600 text-white py-3 rounded-full font-bold shadow-md transition duration-300" onclick="sendCommand('ventilador/off')">
-                                <i class="fas fa-stop mr-2"></i> Apagar
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Bomba de Agua -->
-                    <div class="bg-white rounded-3xl shadow-lg p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <div class="flex items-center gap-3 mb-4 text-teal-500">
-                                <i class="fas fa-water fa-xl"></i>
-                                <h4 class="text-xl font-semibold text-gray-800">Bomba de Agua</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-6">
-                                Activa la bomba de riego por 8 segundos para mantener la humedad del suelo adecuada.
-                            </p>
-                        </div>
-                        <button class="bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-full font-bold shadow-md transition duration-300" onclick="sendCommand('bomba')">
-                            <i class="fas fa-play mr-2"></i> Activar Bomba (8s)
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-    <!-- Modal Motor -->
-    <div class="modal fade" id="modalMotor" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title">Eficiencia del Motor</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Detalles completos del funcionamiento y eficiencia del motor eléctrico...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Temperatura -->
-    <div class="modal fade" id="modalTemp" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">Temperatura Ambiental</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Aquí puedes ver valores históricos o advertencias relacionadas a la temperatura.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Luz -->
-    <div class="modal fade" id="modalLuz" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-warning">
-                    <h5 class="modal-title">Luz Ambiental</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Datos sobre la intensidad de luz y su impacto en el sistema de crecimiento.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const tempCanvas = document.getElementById("tempChart");
-                const humCanvas = document.getElementById("humChart");
-                const tablaBody = document.getElementById("tablaRegistros");
-                const inputBusqueda = document.getElementById("inputBusqueda");
-
-                // Función para determinar color del estado según valor del sensor
-                function obtenerColorEstado(valor) {
-                    if (valor < 20) return "bg-red-200 text-red-800";
-                    if (valor < 40) return "bg-yellow-200 text-yellow-800";
-                    return "bg-green-200 text-green-800";
-                }
-
-                // Función para actualizar la tabla de monitoreo
-                function actualizarTabla(data) {
-                    tablaBody.innerHTML = "";
-                    data.forEach(registro => {
-                        const fila = document.createElement("tr");
-                        fila.classList.add("text-center", "border-b", "hover:bg-gray-50");
-
-                        const estadoColor = obtenerColorEstado(registro.valor);
-
-                        fila.innerHTML = `
-                            <td class="px-4 py-2">${registro.fechaHora}</td>
-                            <td class="px-4 py-2">${registro.sensor}</td>
-                            <td class="px-4 py-2">${registro.valor}</td>
-                            <td class="px-4 py-2">
-                                <span class="px-2 py-1 rounded-full ${estadoColor}">
-                                    ${registro.estado}
-                                </span>
-                            </td>
-                        `;
-                        tablaBody.appendChild(fila);
+            async function sendCommand(commandPath) {
+                try {
+                    const response = await fetch(`${apiBaseUrl}/api/Control/${commandPath}`, {
+                        method: "POST"
                     });
+                    const text = await response.text();
+                    const statusElem = document.getElementById('status');
+                    if (statusElem) statusElem.innerText = `Respuesta: ${text}`;
+                } catch (error) {
+                    console.error('Error:', error);
+                    const statusElem = document.getElementById('status');
+                    if (statusElem) statusElem.innerText = 'Error al enviar el comando.';
                 }
+            }
 
-                // Función para cargar datos (reemplazar por fetch desde backend si aplica)
-                function cargarDatos() {
-                    const datosSimulados = [
-                        { fechaHora: "2025-07-08 10:00", sensor: "Temperatura", valor: 25, estado: "Normal" },
-                        { fechaHora: "2025-07-08 10:01", sensor: "Humedad", valor: 60, estado: "Óptimo" },
-                        { fechaHora: "2025-07-08 10:02", sensor: "Luz", valor: 15, estado: "Bajo" }
-                    ];
-                    actualizarTabla(datosSimulados);
-                }
+            function closeModal(id) {
+                const modal = document.getElementById(id);
+                if(modal) modal.classList.add('hidden');
+            }
 
-                // Inicializar gráfico de temperatura
-                if (tempCanvas) {
-                    new Chart(tempCanvas, {
-                        type: 'line',
-                        data: {
-                            labels: ['8:00', '9:00', '10:00', '11:00', '12:00'],
-                            datasets: [{
-                                label: 'Temperatura (°C)',
-                                data: [22, 24, 23, 25, 26],
-                                borderColor: 'rgba(255, 99, 132, 1)',
-                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                                fill: true,
-                                tension: 0.4
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            plugins: {
-                                title: {
-                                    display: true,
-                                    text: 'Temperatura - Últimas Horas'
-                                }
-                            },
-                            scales: {
-                                y: { beginAtZero: true }
-                            }
+            document.addEventListener('DOMContentLoaded', () => {
+                fetchLatestSensorData();
+                setInterval(fetchLatestSensorData, 1000);
+
+                // Código para actualizar valores dinámicos en modales
+                const modalMotor = document.getElementById('modalMotor');
+                if(modalMotor) {
+                    modalMotor.addEventListener('show.bs.modal', function () {
+                        const motorValElem = document.getElementById('motorEfficiency');
+                        const modalMotorValue = document.getElementById('modalMotorValue');
+                        if (motorValElem && modalMotorValue) {
+                            modalMotorValue.textContent = motorValElem.textContent;
                         }
                     });
-                } else {
-                    console.error("No se encontró el canvas con id 'tempChart'");
                 }
 
-                // Inicializar gráfico de humedad
-                if (humCanvas) {
-                    new Chart(humCanvas, {
-                        type: 'line',
-                        data: {
-                            labels: ['8:00', '9:00', '10:00', '11:00', '12:00'],
-                            datasets: [{
-                                label: 'Humedad (%)',
-                                data: [60, 62, 61, 64, 63],
-                                borderColor: 'rgba(54, 162, 235, 1)',
-                                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                                fill: true,
-                                tension: 0.4
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            plugins: {
-                                title: {
-                                    display: true,
-                                    text: 'Humedad - Últimas Horas'
-                                }
-                            },
-                            scales: {
-                                y: { beginAtZero: true }
-                            }
+                const modalTemp = document.getElementById('modalTemp');
+                if(modalTemp) {
+                    modalTemp.addEventListener('show.bs.modal', function () {
+                        const tempVal = document.getElementById('temperatureValue');
+                        const modalTempValue = document.getElementById('modalTempValue');
+                        if(tempVal && modalTempValue) {
+                            modalTempValue.textContent = tempVal.textContent;
                         }
                     });
-                } else {
-                    console.error("No se encontró el canvas con id 'humChart'");
                 }
 
-                // Lógica de búsqueda (filtrado por sensor)
-                if (inputBusqueda) {
-                    inputBusqueda.addEventListener("input", function () {
-                        const valorBusqueda = this.value.toLowerCase();
-                        const filas = tablaBody.querySelectorAll("tr");
-                        filas.forEach(fila => {
-                            const textoSensor = fila.children[1]?.textContent?.toLowerCase() || "";
-                            fila.style.display = textoSensor.includes(valorBusqueda) ? "" : "none";
-                        });
+                const modalLuz = document.getElementById('modalLuz');
+                if(modalLuz) {
+                    modalLuz.addEventListener('show.bs.modal', function () {
+                        const luzVal = document.getElementById('lightStatus');
+                        const modalLuzValue = document.getElementById('modalLuzValue');
+                        if(luzVal && modalLuzValue) {
+                            modalLuzValue.textContent = luzVal.textContent;
+                        }
                     });
                 }
-
-                // Cargar datos simulados al inicio
-                cargarDatos();
             });
         </script>
 
 </body>
-</html> 
- *@
+</html>
+
