@@ -125,89 +125,168 @@
         </section>
 
 
-        <section class="overflow-hidden bg-white py-12 sm:py-20">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 items-center">
-                    <!-- Texto -->
-                    <div class="lg:pr-8 lg:pt-4" data-aos="fade-right">
-                        <div class="lg:max-w-lg">
-                            @* <h2 class="text-base font-semibold leading-7 text-green-600">Montaje virtual</h2> *@
-                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Diseño en Tinkercad</p>
-                            <p class="mt-6 text-lg leading-8 text-gray-600">
-                                Para simular y validar el funcionamiento del invernadero inteligente, se desarrolló un montaje virtual en <strong>Tinkercad</strong>.
-                                Este entorno permitió conectar virtualmente los sensores y actuadores, y probar el código de Arduino de manera interactiva y segura.
-                            </p>
-                            <ul class="mt-8 space-y-4 text-base leading-7 text-gray-700 list-disc list-inside">
-                                <li><span class="font-semibold text-gray-900">Sensores conectados:</span> humedad del suelo, temperatura, luz ambiental.</li>
-                                <li><span class="font-semibold text-gray-900">Actuadores:</span> ventilador, bomba de riego y sistema de iluminación.</li>
-                                <li><span class="font-semibold text-gray-900">Simulación en tiempo real:</span> permitió verificar el comportamiento automático del sistema.</li>
-                            </ul>
-                            <div class="mt-10 flex items-center gap-x-6">
-                                <!-- Botón para abrir modal -->
-                                <button type="button" class="rounded-md bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 transition"
-                                        data-bs-toggle="modal" data-bs-target="#codigoModal">
-                                    Ver código
-                                </button>
-                                <a href="#" class="text-sm font-semibold leading-6 text-gray-700 hover:text-green-600 transition">Leer más<span aria-hidden="true"> →</span></a>
-                            </div>
-                        </div>
-                    </div>
+        <section class="bg-gradient-to-br from-green-100 to-white py-20 px-6 sm:px-10 lg:px-16">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                    <!-- Imagen del Tinkercad -->
-                    <img src="sources/Circuito.png"
-                         alt="Montaje del invernadero en Tinkercad"
-                         class="w-full max-w-xl rounded-xl shadow-xl ring-1 ring-gray-300/20"
-                         data-aos="zoom-in"
-                         loading="lazy">
+                <!-- Texto -->
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-green-800 leading-tight">
+                        Diseño virtual en Tinkercad
+                    </h2>
+                    <p class="mt-6 text-xl text-gray-700 leading-relaxed">
+                        Para validar el funcionamiento del <strong class="text-green-700">invernadero inteligente</strong>, se creó un montaje virtual en Tinkercad. Este entorno permitió probar sensores, actuadores y el código Arduino de forma segura e interactiva.
+                    </p>
+                    <ul class="mt-8 space-y-4 text-lg text-gray-800 list-disc list-inside">
+                        <li><strong class="text-green-900">Sensores:</strong> humedad del suelo, temperatura y luz.</li>
+                        <li><strong class="text-green-900">Actuadores:</strong> ventilador, bomba de riego y LEDs.</li>
+                        <li><strong class="text-green-900">Simulación:</strong> comportamiento en tiempo real del sistema.</li>
+                    </ul>
+
+                    <div class="mt-10">
+                        <button type="button"
+                                class="inline-block rounded-lg bg-green-600 px-6 py-3 text-lg font-semibold text-white shadow-md hover:bg-green-500 transition"
+                                data-bs-toggle="modal" data-bs-target="#codigoModal">
+                            Ver código
+                        </button>
+                    </div>
                 </div>
+
+                <!-- Imagen -->
+                <div class="relative group" data-aos="zoom-in">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-green-200 transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+                         data-bs-toggle="modal" data-bs-target="#imagenTinkercadModal">
+                        <img src="sources/Circuito.png"
+                             alt="Montaje en Tinkercad"
+                             class="w-full h-auto object-cover rounded-2xl"
+                             loading="lazy" />
+                    </div>
+                    <p class="mt-4 text-center text-gray-500 text-sm">Haz clic para ampliar la imagen</p>
+                </div>
+
             </div>
         </section>
 
-        <!-- 🟢 Sección Automatización Inteligente -->
+        <!-- NUEVO TÍTULO GENERAL FUERA DEL SECTION -->
+        <div class="text-center mt-16">
+            <h2 class="text-5xl sm:text-6xl font-extrabold text-emerald-700 mb-10 leading-tight">
+                Automatización Inteligente
+            </h2>
+        </div>
+
+        <!-- Sección: Automatización Inteligente -->
         <section class="bg-gradient-to-b from-white to-green-50 py-20" id="product">
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-center">
 
                 <!-- Texto -->
                 <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                    <h2 class="text-4xl sm:text-5xl font-extrabold text-emerald-700 mb-6">Automatización Inteligente</h2>
-                    <p class="text-lg sm:text-xl text-gray-700 mb-6 leading-relaxed">
+                    <!-- Ya no lleva el título aquí -->
+                    <p class="text-xl sm:text-2xl text-gray-700 mb-6 leading-relaxed">
                         Nuestro sistema combina sensores de última generación con control automatizado para garantizar un crecimiento eficiente y sostenible.
                     </p>
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <span class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow hover:bg-emerald-700 transition">Eficiencia</span>
-                        <span class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow hover:bg-emerald-700 transition">Automatización</span>
-                        <span class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow hover:bg-emerald-700 transition">Monitoreo</span>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-emerald-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-emerald-700 transition text-lg">Eficiencia</span>
+                        <span class="bg-emerald-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-emerald-700 transition text-lg">Automatización</span>
+                        <span class="bg-emerald-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-emerald-700 transition text-lg">Monitoreo</span>
                     </div>
-                    <a href="#contact" class="inline-block bg-emerald-600 text-white py-3 px-6 rounded-full shadow hover:bg-emerald-700 transition text-base font-semibold">
-                        Solicita más información
-                    </a>
                 </div>
 
-                <!-- Imagen principal -->
+                <!-- Imagen central con efecto y modal -->
                 <div class="relative" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-                    <img id="mainImage" src="sources/3.jpg" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover transition-all duration-500">
+                    <img id="mainImage" src="sources/3.jpg" alt="Invernadero inteligente"
+                         class="rounded-3xl shadow-2xl w-full h-[500px] object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
+                         data-bs-toggle="modal" data-bs-target="#modalImagenAmpliada">
                 </div>
 
-                <!-- Galería lateral y descripción -->
+                <!-- Galería y características -->
                 <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Tecnologías Usadas</h4>
-                    <div class="flex gap-4 mb-6">
-                        <img src="sources/3.jpg" onclick="changeMainImage(this)" class="cursor-pointer w-32 h-32 object-cover rounded-xl shadow-lg hover:ring-4 ring-emerald-400 transition-all duration-300">
-                        <img src="sources/4.png" onclick="changeMainImage(this)" class="cursor-pointer w-32 h-32 object-cover rounded-xl shadow-lg hover:ring-4 ring-emerald-400 transition-all duration-300">
-                        <img src="sources/6.png" onclick="changeMainImage(this)" class="cursor-pointer w-32 h-32 object-cover rounded-xl shadow-lg hover:ring-4 ring-emerald-400 transition-all duration-300">
+                    <h4 class="text-3xl font-semibold text-gray-800 mb-6">Tecnologías Usadas</h4>
+
+                    <!-- Miniaturas -->
+                    <div class="flex gap-4 mb-6" id="thumbnails">
+                        <img src="sources/3.jpg" onclick="changeMainImage(this)"
+                             class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg ring-4 ring-emerald-400 transition duration-300">
+                        <img src="sources/4.png" onclick="changeMainImage(this)"
+                             class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg hover:ring-4 hover:ring-emerald-400 transition duration-300">
+                        <img src="sources/6.png" onclick="changeMainImage(this)"
+                             class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg hover:ring-4 hover:ring-emerald-400 transition duration-300">
                     </div>
-                    <ul class="text-base sm:text-lg space-y-3 text-gray-700">
-                        <li><strong class="text-emerald-700">DHT11/DHT22:</strong> mide temperatura y humedad.</li>
-                        <li><strong class="text-emerald-700">Sensor de suelo:</strong> mide humedad del sustrato.</li>
-                        <li><strong class="text-emerald-700">LDR:</strong> ajusta la iluminación según la luz ambiental.</li>
-                        <li><strong class="text-emerald-700">Actuadores:</strong> bomba de riego y ventilador de enfriamiento.</li>
-                        <li><strong class="text-emerald-700">Arduino + Web/App:</strong> gestión remota y monitoreo desde cualquier lugar.</li>
+
+                    <!-- Lista de características -->
+                    <ul class="space-y-4 text-lg text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 text-xl">🌡️</span>
+                            <span><strong class="text-emerald-700">DHT11/DHT22:</strong> mide temperatura y humedad.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 text-xl">🌱</span>
+                            <span><strong class="text-emerald-700">Sensor de suelo:</strong> mide humedad del sustrato.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 text-xl">💡</span>
+                            <span><strong class="text-emerald-700">LDR:</strong> ajusta la iluminación según la luz ambiental.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 text-xl">⚙️</span>
+                            <span><strong class="text-emerald-700">Actuadores:</strong> bomba de riego y ventilador de enfriamiento.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 text-xl">🌐</span>
+                            <span><strong class="text-emerald-700">Arduino + Web/App:</strong> gestión remota y monitoreo desde cualquier lugar.</span>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </section>
 
+        <!-- Modal Bootstrap para imagen ampliada -->
+        <div class="modal fade" id="modalImagenAmpliada" tabindex="-1" aria-labelledby="modalImagenAmpliadaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-white rounded-lg shadow-lg">
+                    <div class="modal-header border-b">
+                        <h5 class="modal-title text-lg font-semibold text-green-700" id="modalImagenAmpliadaLabel">Vista ampliada del montaje</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <img id="modalImageContent" src="sources/3.jpg" alt="Vista ampliada" class="w-full h-auto rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script para cambiar imagen principal -->
+      @*   <script>
+            function changeMainImage(imgElement) {
+              const newSrc = imgElement.getAttribute("src");
+              document.getElementById("mainImage").setAttribute("src", newSrc);
+              document.getElementById("modalImageContent").setAttribute("src", newSrc);
+            }
+        </script> *@
+        <script>
+            function changeMainImage(imgElement) {
+              const newSrc = imgElement.getAttribute("src");
+
+              // Cambiar imagen central y en el modal
+              document.getElementById("mainImage").setAttribute("src", newSrc);
+              document.getElementById("modalImageContent").setAttribute("src", newSrc);
+
+              // Quitar borde a todas las miniaturas
+              const thumbnails = document.querySelectorAll(".thumbnail");
+              thumbnails.forEach(el => {
+                el.classList.remove("ring-4", "ring-emerald-400");
+              });
+
+              // Agregar borde solo al seleccionado
+              imgElement.classList.add("ring-4", "ring-emerald-400");
+            }
+
+            // Al cargar, poner borde al primero por defecto
+            document.addEventListener("DOMContentLoaded", function () {
+              const thumbnails = document.querySelectorAll(".thumbnail");
+              if (thumbnails.length > 0) {
+                thumbnails[0].classList.add("ring-4", "ring-emerald-400");
+              }
+            });
+        </script>
 
 
         <!-- Sensores Section -->
@@ -648,6 +727,21 @@ void loop() {
         </div>
 
 
+        <!-- Modal para mostrar la imagen ampliada -->
+        <div class="modal fade" id="imagenTinkercadModal" tabindex="-1" aria-labelledby="imagenTinkercadModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-white rounded-lg shadow-lg">
+                    <div class="modal-header border-b">
+                        <h5 class="modal-title text-lg font-semibold text-green-700" id="imagenTinkercadModalLabel">Vista ampliada del montaje</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <img src="sources/Circuito.png" alt="Vista ampliada" class="w-full h-auto rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <script>
         function openModal(id) {
           document.getElementById(id).classList.remove('hidden');
@@ -737,6 +831,8 @@ void loop() {
                 mainImage.classList.remove('opacity-0');
             }, 200);
         }
+
+                    
     </script>
 </body>
 </html>
