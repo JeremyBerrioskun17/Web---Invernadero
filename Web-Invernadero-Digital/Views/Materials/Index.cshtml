@@ -166,20 +166,18 @@
             </div>
         </section>
 
-        <!-- NUEVO TÍTULO GENERAL FUERA DEL SECTION -->
-        <div class="text-center mt-16">
-            <h2 class="text-5xl sm:text-6xl font-extrabold text-emerald-700 mb-10 leading-tight">
-                Automatización Inteligente
-            </h2>
-        </div>
-
         <!-- Sección: Automatización Inteligente -->
         <section class="bg-gradient-to-b from-white to-green-50 py-20" id="product">
+            <div class="text-center mb-10">
+                <h2 class="text-5xl sm:text-6xl font-extrabold text-emerald-700 leading-tight serif">
+                    Automatización Inteligente
+                </h2>
+            </div>
+
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-center">
 
                 <!-- Texto -->
                 <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                    <!-- Ya no lleva el título aquí -->
                     <p class="text-xl sm:text-2xl text-gray-700 mb-6 leading-relaxed">
                         Nuestro sistema combina sensores de última generación con control automatizado para garantizar un crecimiento eficiente y sostenible.
                     </p>
@@ -190,49 +188,30 @@
                     </div>
                 </div>
 
-                <!-- Imagen central con efecto y modal -->
+                <!-- Imagen principal -->
                 <div class="relative" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
                     <img id="mainImage" src="sources/3.jpg" alt="Invernadero inteligente"
                          class="rounded-3xl shadow-2xl w-full h-[500px] object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
                          data-bs-toggle="modal" data-bs-target="#modalImagenAmpliada">
                 </div>
 
-                <!-- Galería y características -->
+                <!-- Lista de características -->
                 <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                     <h4 class="text-3xl font-semibold text-gray-800 mb-6">Tecnologías Usadas</h4>
 
                     <!-- Miniaturas -->
                     <div class="flex gap-4 mb-6" id="thumbnails">
-                        <img src="sources/3.jpg" onclick="changeMainImage(this)"
-                             class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg ring-4 ring-emerald-400 transition duration-300">
-                        <img src="sources/4.png" onclick="changeMainImage(this)"
-                             class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg hover:ring-4 hover:ring-emerald-400 transition duration-300">
-                        <img src="sources/6.png" onclick="changeMainImage(this)"
-                             class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg hover:ring-4 hover:ring-emerald-400 transition duration-300">
+                        <img src="sources/3.jpg" onclick="changeMainImage(this)" class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg ring-4 ring-emerald-400 transition duration-300">
+                        <img src="sources/4.png" onclick="changeMainImage(this)" class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg hover:ring-4 hover:ring-emerald-400 transition duration-300">
+                        <img src="sources/6.png" onclick="changeMainImage(this)" class="thumbnail cursor-pointer w-28 h-28 object-contain bg-white rounded-xl shadow-lg hover:ring-4 hover:ring-emerald-400 transition duration-300">
                     </div>
 
-                    <!-- Lista de características -->
                     <ul class="space-y-4 text-lg text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600 text-xl">🌡️</span>
-                            <span><strong class="text-emerald-700">DHT11/DHT22:</strong> mide temperatura y humedad.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600 text-xl">🌱</span>
-                            <span><strong class="text-emerald-700">Sensor de suelo:</strong> mide humedad del sustrato.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600 text-xl">💡</span>
-                            <span><strong class="text-emerald-700">LDR:</strong> ajusta la iluminación según la luz ambiental.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600 text-xl">⚙️</span>
-                            <span><strong class="text-emerald-700">Actuadores:</strong> bomba de riego y ventilador de enfriamiento.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600 text-xl">🌐</span>
-                            <span><strong class="text-emerald-700">Arduino + Web/App:</strong> gestión remota y monitoreo desde cualquier lugar.</span>
-                        </li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-600 text-xl">🌡️</span><span><strong class="text-emerald-700">DHT11/DHT22:</strong> mide temperatura y humedad.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-600 text-xl">🌱</span><span><strong class="text-emerald-700">Sensor de suelo:</strong> mide humedad del sustrato.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-600 text-xl">💡</span><span><strong class="text-emerald-700">LDR:</strong> ajusta la iluminación según la luz ambiental.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-600 text-xl">⚙️</span><span><strong class="text-emerald-700">Actuadores:</strong> bomba de riego y ventilador de enfriamiento.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-600 text-xl">🌐</span><span><strong class="text-emerald-700">Arduino + Web/App:</strong> gestión remota y monitoreo desde cualquier lugar.</span></li>
                     </ul>
                 </div>
             </div>
@@ -253,40 +232,25 @@
             </div>
         </div>
 
-        <!-- Script para cambiar imagen principal -->
-      @*   <script>
-            function changeMainImage(imgElement) {
-              const newSrc = imgElement.getAttribute("src");
-              document.getElementById("mainImage").setAttribute("src", newSrc);
-              document.getElementById("modalImageContent").setAttribute("src", newSrc);
-            }
-        </script> *@
         <script>
             function changeMainImage(imgElement) {
               const newSrc = imgElement.getAttribute("src");
-
-              // Cambiar imagen central y en el modal
               document.getElementById("mainImage").setAttribute("src", newSrc);
               document.getElementById("modalImageContent").setAttribute("src", newSrc);
-
-              // Quitar borde a todas las miniaturas
               const thumbnails = document.querySelectorAll(".thumbnail");
-              thumbnails.forEach(el => {
-                el.classList.remove("ring-4", "ring-emerald-400");
-              });
-
-              // Agregar borde solo al seleccionado
+              thumbnails.forEach(el => el.classList.remove("ring-4", "ring-emerald-400"));
               imgElement.classList.add("ring-4", "ring-emerald-400");
             }
 
-            // Al cargar, poner borde al primero por defecto
             document.addEventListener("DOMContentLoaded", function () {
               const thumbnails = document.querySelectorAll(".thumbnail");
               if (thumbnails.length > 0) {
                 thumbnails[0].classList.add("ring-4", "ring-emerald-400");
               }
+              AOS.init();
             });
         </script>
+
 
 
         <!-- Sensores Section -->
