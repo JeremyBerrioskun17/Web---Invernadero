@@ -80,58 +80,72 @@
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-5xl font-extrabold text-green-800 mb-6">Nuestro Equipo</h2>
                     <p class="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                        Un grupo apasionado por la tecnología y la innovación aplicada al medioambiente.
-                        Conformado por tres estudiantes comprometidos: <strong>Chris Cardoza</strong>, <strong>Jeremy Berrios</strong> y <strong>Gabriel Cardoza</strong>.
+                        Somos estudiantes de tercer año de la carrera de Mecatrónica, apasionados por la innovación tecnológica y su aplicación en el entorno.
+                        Este proyecto fue desarrollado para la clase de <strong>Digital II</strong>, combinando habilidades en electrónica, software y diseño.
+                        Contamos con la experiencia de un ingeniero en sistemas y la creatividad de un joven entusiasta por la tecnología: <strong>Jeremy Berrios</strong> y <strong>Chris Cardoza</strong>.
                     </p>
                 </div>
 
                 <!-- Tarjetas del equipo -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Card template -->
-                    <div onclick="openModal()" class="cursor-pointer group bg-green-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300 border border-green-300">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Card: Chris -->
+                    <div onclick="openModal('modalChris')" class="cursor-pointer bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-8 border-green-400 group">
                         <div class="flex justify-center mb-4">
-                            <img src="/sources/Chris.png" alt="Chris Cardoza" class="w-48 h-48 object-contain rounded-full shadow-md group-hover:scale-105 transition-transform duration-300" />
+                            <img src="/sources/Chris.png" alt="Chris Cardoza" class="w-40 h-40 object-contain rounded-full shadow-md group-hover:scale-110 transition-transform duration-300" />
                         </div>
-                        <h3 class="text-3xl font-bold text-green-900 text-center mb-2">Chris Cardoza</h3>
-                        <p class="text-center text-lg text-green-700 mb-2">Especialista en Frontend</p>
-                        <p class="text-md text-green-800 text-center leading-relaxed">
-                            Montaje físico del circuito y presentación visual del sistema.
-                        </p>
-                        <div class="text-green-600 text-3xl text-center mt-4">
-                            <i class="fas fa-solar-panel"></i>
-                        </div>
+                        <h3 class="text-3xl font-bold text-green-900 text-center">Chris Cardoza</h3>
+                        <p class="text-center text-lg text-green-600 mt-1">Diseño y Visualización</p>
+                        <p class="text-center text-md text-gray-700 mt-3">Encargado del montaje físico del circuito y la interfaz visual de usuario del sistema.</p>
                     </div>
 
-                    <div onclick="openModal()" class="cursor-pointer group bg-green-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300 border border-green-300">
+                    <!-- Card: Jeremy -->
+                    <div onclick="openModal('modalJeremy')" class="cursor-pointer bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-t-8 border-green-400 group">
                         <div class="flex justify-center mb-4">
-                            <img src="/sources/Jeremy.png" alt="Jeremy Berrios" class="w-48 h-48 object-contain rounded-full shadow-md group-hover:scale-105 transition-transform duration-300" />
+                            <img src="/sources/Jeremy.png" alt="Jeremy Berrios" class="w-40 h-40 object-contain rounded-full shadow-md group-hover:scale-110 transition-transform duration-300" />
                         </div>
-                        <h3 class="text-3xl font-bold text-green-900 text-center mb-2">Jeremy Berrios</h3>
-                        <p class="text-center text-lg text-green-700 mb-2">Desarrollador Backend</p>
-                        <p class="text-md text-green-800 text-center leading-relaxed">
-                            Programación de la lógica Arduino y desarrollo de la API para monitoreo.
-                        </p>
-                        <div class="text-green-600 text-3xl text-center mt-4">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                    </div>
-
-                    <div onclick="openModal()" class="cursor-pointer group bg-green-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300 border border-green-300">
-                        <div class="flex justify-center mb-4">
-                            <img src="/sources/Gabriel.png" alt="Gabriel Cardoza" class="w-48 h-48 object-contain rounded-full shadow-md group-hover:scale-105 transition-transform duration-300" />
-                        </div>
-                        <h3 class="text-3xl font-bold text-green-900 text-center mb-2">Gabriel Cardoza</h3>
-                        <p class="text-center text-lg text-green-700 mb-2">Líder del Equipo</p>
-                        <p class="text-md text-green-800 text-center leading-relaxed">
-                            Ideas, materiales y soluciones técnicas para el desarrollo integral del proyecto.
-                        </p>
-                        <div class="text-green-600 text-3xl text-center mt-4">
-                            <i class="fas fa-seedling"></i>
-                        </div>
+                        <h3 class="text-3xl font-bold text-green-900 text-center">Jeremy Berrios</h3>
+                        <p class="text-center text-lg text-green-600 mt-1">Programación y Backend</p>
+                        <p class="text-center text-md text-gray-700 mt-3">Responsable de la lógica Arduino, desarrollo de la API y conexión entre hardware y software.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal: Chris -->
+            <div id="modalChris" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white rounded-xl p-6 max-w-xl mx-auto shadow-lg relative animate-fadeIn">
+                    <button onclick="closeModal('modalChris')" class="absolute top-2 right-4 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+                    <h3 class="text-3xl font-bold text-green-900 mb-2">Chris Cardoza</h3>
+                    <p class="text-gray-700 text-lg">
+                        Chris es un estudiante entusiasta de la tecnología con gran interés en el diseño, la electrónica y la presentación de soluciones.
+                        Su participación fue clave para la implementación visual del sistema, asegurando que cada parte del proyecto fuera funcional y estética.
+                        Se encargó del montaje físico de los componentes y del diseño de la interfaz de usuario.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal: Jeremy -->
+            <div id="modalJeremy" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white rounded-xl p-6 max-w-xl mx-auto shadow-lg relative animate-fadeIn">
+                    <button onclick="closeModal('modalJeremy')" class="absolute top-2 right-4 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+                    <h3 class="text-3xl font-bold text-green-900 mb-2">Jeremy Berrios</h3>
+                    <p class="text-gray-700 text-lg">
+                        Jeremy es un ingeniero en sistemas con experiencia en desarrollo de software, quien lideró el diseño lógico del sistema, incluyendo la programación del microcontrolador Arduino y la API en .NET para el monitoreo del invernadero. Su enfoque en eficiencia y conectividad fue clave para el éxito del proyecto.
+                    </p>
+                </div>
+            </div>
         </section>
+
+        <!-- Script para modales -->
+        <script>
+            function openModal(id) {
+              document.getElementById(id).classList.remove("hidden");
+            }
+
+            function closeModal(id) {
+              document.getElementById(id).classList.add("hidden");
+            }
+        </script>
 
 
         
@@ -416,7 +430,7 @@
         </section>
 
 
-        <!-- MODAL -->
+     @*    <!-- MODAL -->
         <div id="teamModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-white/70 backdrop-blur-sm">
             <div class="relative bg-white rounded-3xl shadow-2xl w-[90%] max-w-3xl mx-auto animate-fade-in-up">
                 <!-- Imagen superior -->
@@ -448,7 +462,7 @@
               document.getElementById("teamModal").classList.remove("flex");
               document.getElementById("teamModal").classList.add("hidden");
             }
-        </script>
+        </script> *@
     </div>
 
     <!-- AOS Animate on Scroll CSS -->

@@ -253,193 +253,208 @@
 
 
 
-        <!-- Sensores Section -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-green-800 mb-4" data-aos="fade-down">
                     🌱 Sensores Inteligentes
                 </h2>
                 <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
-                    Cada sensor del sistema permite monitorear y automatizar el cuidado de las plantas en tiempo real.
+                    Cada sensor permite monitorear y automatizar el cuidado de las plantas en tiempo real.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-                    <!-- Card -->
-                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up">
+                    <!-- Sensor Card -->
+                    <div class="group rounded-3xl overflow-hidden shadow-lg bg-white border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2" data-aos="zoom-in">
                         <div class="relative">
-                            <img src="/sources/sensor2.png" alt="Sensor temperatura y humedad" class="w-full h-56 object-cover">
-                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor DHT22</div>
+                            <img src="/sources/sensor2.png" alt="Sensor DHT22" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-2 left-2 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Sensor DHT22</span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Temperatura y Humedad Ambiental</h3>
-                            <p class="text-gray-600 mt-2 text-sm">Permite monitorear las condiciones climáticas del invernadero.</p>
+                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition">Temperatura y Humedad</h3>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Monitorea las condiciones climáticas del invernadero y activa la ventilación automáticamente.</p>
                         </div>
                     </div>
 
-                    <!-- Card -->
-                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Humedad del Suelo -->
+                    <div class="group rounded-3xl overflow-hidden shadow-lg bg-white border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
                         <div class="relative">
-                            <img src="/sources/sensor1.png" alt="Sensor de humedad de suelo" class="w-full h-56 object-cover">
-                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor Higrométrico</div>
+                            <img src="/sources/sensor1.png" alt="Sensor de humedad" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-2 left-2 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Sensor Higrométrico</span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Humedad del Suelo</h3>
-                            <p class="text-gray-600 mt-2 text-sm">Detecta la humedad de la tierra para activar el sistema de riego automáticamente.</p>
+                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition">Humedad del Suelo</h3>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Detecta la sequedad del sustrato para activar la bomba de riego de forma precisa.</p>
                         </div>
                     </div>
 
-                    <!-- Card -->
-                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Luz -->
+                    <div class="group rounded-3xl overflow-hidden shadow-lg bg-white border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
                         <div class="relative">
-                            <img src="/sources/sensor3.png" alt="Sensor de luz" class="w-full h-56 object-cover">
-                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor LDR</div>
+                            <img src="/sources/sensor3.png" alt="Sensor LDR" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-2 left-2 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Sensor LDR</span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Sensor de Luz</h3>
-                            <p class="text-gray-600 mt-2 text-sm">Mide la cantidad de luz para controlar la iluminación artificial cuando sea necesario.</p>
+                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition">Sensor de Luz</h3>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Evalúa la iluminación ambiental para activar LEDs solo si la luz natural es insuficiente.</p>
                         </div>
                     </div>
 
-                    <!-- Card -->
-                    <div class="rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl max-w-md mx-auto" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Agua -->
+                    <div class="group rounded-3xl overflow-hidden shadow-lg bg-white border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
                         <div class="relative">
-                            <img src="/sources/sensor4.png" alt="Sensor de nivel de agua" class="w-full h-56 object-cover">
-                            <div class="absolute bottom-0 left-0 bg-green-600 text-white text-sm px-3 py-1">Sensor de Nivel de Agua</div>
+                            <img src="/sources/sensor4.png" alt="Sensor de nivel de agua" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-2 left-2 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Sensor de Agua</span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 hover:text-green-600 transition">Nivel de Agua</h3>
-                            <p class="text-gray-600 mt-2 text-sm">Monitorea el nivel de agua en la tina para garantizar el suministro del sistema de riego.</p>
+                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-green-700 transition">Nivel de Agua</h3>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Garantiza un suministro de agua adecuado para el sistema de riego automatizado.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
+        <section class="bg-green-50 py-12 px-4">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-green-800 flex items-center justify-center gap-2 mb-2">
+                    <span class="text-purple-500 text-4xl">⚙️</span> Periféricos de Salida
+                </h2>
+                <p class="text-gray-600 mb-10">
+                    Actúan según las lecturas de los sensores, automatizando el ambiente del invernadero para un crecimiento saludable.
+                </p>
 
-
-
-        <!-- Periféricos del Invernadero -->
-        <section class="py-16 bg-green-50">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-green-800">Periféricos de Salida</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-                    <!-- LEDs -->
-                    <div class="w-full max-w-sm group transition-transform hover:-translate-y-1 duration-300">
-                        <div class="relative overflow-hidden rounded-lg mb-4 shadow-lg h-[22rem]">
-                            <span class="absolute top-3 left-3 bg-green-600 text-white text-xs px-2 py-1 rounded">Control Lumínico</span>
-                            <img src="/sources/out2.png"
-                                 alt="LEDs de Iluminación"
-                                 class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button class="bg-white text-green-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-green-100 transition">
-                                    <i class="ri-eye-line"></i>
-                                </button>
-                            </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- LEDs de Cultivo -->
+                    <div class="bg-white rounded-3xl shadow-lg p-4 hover:shadow-xl transition">
+                        <div class="relative overflow-hidden rounded-2xl">
+                            <img src="/sources/out1.png" alt="LEDs de Cultivo"
+                                 class="w-full h-64 object-cover rounded-2xl transform hover:scale-105 transition duration-300">
+                            <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                                Luz Artificial
+                            </span>
                         </div>
-                        <div>
-                            <h3 class="font-medium text-green-900 mb-1">LEDs de Cultivo</h3>
-                            <p class="text-gray-700 text-sm">Activados automáticamente según la luz solar, aseguran el crecimiento en condiciones óptimas.</p>
-                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mt-4">LEDs de Cultivo</h3>
                     </div>
 
                     <!-- Ventilador -->
-                    <div class="w-full max-w-sm group transition-transform hover:-translate-y-1 duration-300">
-                        <div class="relative overflow-hidden rounded-lg mb-4 shadow-lg h-[22rem]">
-                            <span class="absolute top-3 left-3 bg-blue-500 text-white text-xs px-2 py-1 rounded">Climatización</span>
-                            <img src="/sources/out3.png"
-                                 alt="Ventilador"
-                                 class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button class="bg-white text-blue-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-blue-100 transition">
-                                    <i class="ri-eye-line"></i>
-                                </button>
-                            </div>
+                    <div class="bg-white rounded-3xl shadow-lg p-4 hover:shadow-xl transition">
+                        <div class="relative overflow-hidden rounded-2xl">
+                            <img src="/sources/out2.png" alt="Ventilador"
+                                 class="w-full h-64 object-cover rounded-2xl transform hover:scale-105 transition duration-300">
+                            <span class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                                Ventilación
+                            </span>
                         </div>
-                        <div>
-                            <h3 class="font-medium text-green-900 mb-1">Ventilador</h3>
-                            <p class="text-gray-700 text-sm">Actúa cuando la temperatura supera los 30 °C, evitando el estrés térmico de las plantas.</p>
-                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mt-4">Ventilador</h3>
                     </div>
 
-                    <!-- Mini Bomba -->
-                    <div class="w-full max-w-sm group transition-transform hover:-translate-y-1 duration-300">
-                        <div class="relative overflow-hidden rounded-lg mb-4 shadow-lg h-[22rem]">
-                            <span class="absolute top-3 left-3 bg-teal-600 text-white text-xs px-2 py-1 rounded">Riego Automático</span>
-                            <img src="/sources/out1.png"
-                                 alt="Mini Bomba de Agua"
-                                 class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button class="bg-white text-teal-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-teal-100 transition">
-                                    <i class="ri-eye-line"></i>
-                                </button>
-                            </div>
+                    <!-- Mini Bomba de Agua -->
+                    <div class="bg-white rounded-3xl shadow-lg p-4 hover:shadow-xl transition">
+                        <div class="relative overflow-hidden rounded-2xl">
+                            <img src="/sources/out3.png" alt="Mini Bomba de Agua"
+                                 class="w-full h-64 object-cover rounded-2xl transform hover:scale-105 transition duration-300">
+                            <span class="absolute top-2 left-2 bg-teal-700 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                                Sistema de Riego
+                            </span>
                         </div>
-                        <div>
-                            <h3 class="font-medium text-green-900 mb-1">Mini Bomba de Agua</h3>
-                            <p class="text-gray-700 text-sm">Activa cuando el suelo está seco. Curvatura del caudal diseñada para un riego suave y eficiente.</p>
-                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mt-4">Mini Bomba de Agua</h3>
                     </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="#"
-                       class="inline-block py-3 px-8 border border-green-300 text-green-800 font-medium rounded-button hover:bg-green-100 transition-colors whitespace-nowrap">Ver Todo el Sistema</a>
                 </div>
             </div>
         </section>
 
 
 
-    <!-- Environmental Alert Banner -->
+
         <!-- Sección sobre Arduino UNO -->
-        <section class="py-16 bg-green-900 text-white overflow-hidden relative">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center md:gap-x-10 animate-fade-in-up">
+        <section class="py-20 bg-green-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-fade-up">
 
-                    <!-- Texto e Información -->
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                            Arduino UNO: El Cerebro del Invernadero 🤖
-                        </h2>
-                        <p class="text-xl text-green-100 mb-6">
-                            El sistema automatizado está controlado por un microcontrolador <strong>Arduino UNO</strong>,
-                            encargado de interpretar datos de los sensores y activar actuadores como el riego o la ventilación.
-                        </p>
+                <!-- Texto e Información -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+                        Arduino UNO: El Cerebro del Invernadero 🤖
+                    </h2>
+                    <p class="text-lg text-green-100">
+                        El sistema automatizado está controlado por un microcontrolador <strong>Arduino UNO</strong>,
+                        encargado de interpretar datos de los sensores y activar actuadores como el riego o la ventilación.
+                    </p>
 
-                        <!-- Características del Arduino -->
-                        <div class="flex gap-4 mb-8">
-                            <div class="bg-white/10 rounded-lg p-4 text-center backdrop-blur-md">
-                                <span class="block text-2xl font-bold text-white">14 pines digitales</span>
-                                <span class="text-sm text-green-200">Para conectar sensores y relés</span>
-                            </div>
-                            <div class="bg-white/10 rounded-lg p-4 text-center backdrop-blur-md">
-                                <span class="block text-2xl font-bold text-white">6 entradas analógicas</span>
-                                <span class="text-sm text-green-200">Lectura precisa de señales</span>
-                            </div>
-                            <div class="bg-white/10 rounded-lg p-4 text-center backdrop-blur-md">
-                                <span class="block text-2xl font-bold text-white">Código abierto</span>
-                                <span class="text-sm text-green-200">Fácil de programar y adaptar</span>
-                            </div>
+                    <!-- Características del Arduino -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl shadow hover:scale-105 transition-all">
+                            <p class="text-2xl font-bold">14 pines digitales</p>
+                            <p class="text-sm text-green-200">Para conectar sensores y relés</p>
                         </div>
-
-                        <!-- Botón de acción -->
-                        <a href="#arduino"
-                           class="inline-block py-3 px-8 bg-white text-green-900 font-medium rounded-button hover:bg-green-100 transition-colors shadow-lg whitespace-nowrap">
-                            Saber más sobre Arduino
-                        </a>
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl shadow hover:scale-105 transition-all">
+                            <p class="text-2xl font-bold">6 entradas analógicas</p>
+                            <p class="text-sm text-green-200">Lectura precisa de señales</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl shadow hover:scale-105 transition-all">
+                            <p class="text-2xl font-bold">Código abierto</p>
+                            <p class="text-sm text-green-200">Fácil de programar y adaptar</p>
+                        </div>
                     </div>
 
-                    <!-- Imagen ilustrativa -->
-                    <div class="md:w-1/2 relative md:pl-10">
-                        <img src="/sources/R.png"
-                             alt="Arduino UNO controlando el sistema"
-                             class="rounded-lg w-full shadow-xl border-4 border-white/10 animate-pulse-slow" />
-                        <div class="absolute inset-0 bg-green-500 opacity-10 rounded-lg animate-ping-slow pointer-events-none"></div>
+                    <!-- Botón -->
+                    @* <a href="#arduino"
+                       class="inline-block mt-4 px-6 py-3 bg-white text-green-900 font-semibold rounded-full shadow-md hover:bg-green-100 transition">
+                        Saber más sobre Arduino
+                    </a> *@
+                </div>
+
+                <!-- Imagen ilustrativa -->
+                <div class="relative w-full">
+                    <div class="relative z-10">
+                        <img src="/sources/R.png" alt="Arduino UNO controlando el sistema"
+                             class="rounded-2xl w-full h-auto shadow-2xl border-4 border-white/10 transition-transform hover:scale-105 duration-500">
+                    </div>
+                    <div class="absolute inset-0 rounded-2xl bg-green-500 opacity-10 animate-pulse pointer-events-none"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Sección de Componentes -->
+        <section id="componentes" class="py-16 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-4xl font-bold text-green-700 text-center mb-12 animate-fade-in-up">
+                    Componentes Electrónicos
+                </h2>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+
+                    <!-- Card: Transistor 2N2222 -->
+                    <div class="bg-green-50 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 animate-fade-in-up p-6 flex flex-col items-center text-center max-w-sm w-full sm:w-80">
+                        <img src="/sources/trans.png" alt="Transistor 2N2222"
+                             class="w-28 h-28 object-contain mb-4 rounded-lg border-2 border-green-300 shadow-sm" />
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Transistor 2N2222</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Utilizado como interruptor para controlar relés en el sistema del invernadero.
+                        </p>
+                        <button onclick="openModal('modalTransistor')"
+                                class="mt-auto bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition duration-300">
+                            Ver más
+                        </button>
+                    </div>
+
+                    <!-- Card: Relé Electromecánico -->
+                    <div class="bg-green-50 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 animate-fade-in-up p-6 flex flex-col items-center text-center max-w-sm w-full sm:w-80">
+                        <img src="/sources/relay.png" alt="Relé Electromecánico"
+                             class="w-28 h-28 object-contain mb-4 rounded-lg border-2 border-green-300 shadow-sm" />
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Relé Electromecánico</h3>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Activa dispositivos de alto voltaje con señales de control de bajo voltaje.
+                        </p>
+                        <button onclick="openModal('modalRele')"
+                                class="mt-auto bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition duration-300">
+                            Ver más
+                        </button>
                     </div>
 
                 </div>
@@ -448,83 +463,57 @@
 
 
 
-
-
-    <!-- Componentes Destacados -->
-    <section class="py-16 bg-gradient-to-b from-green-50 to-green-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center text-green-800 mb-16 animate-fade-in-up">
-                Componentes Clave del Invernadero Inteligente
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Card: Transistor 2N2222 -->
-                <div onclick="openModal('modalTransistor')" class="cursor-pointer bg-white rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-green-300">
+        <!-- Modal: Transistor 2N2222 -->
+        <div id="modalTransistor" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-3xl max-w-3xl w-full mx-4 p-8 relative animate-fade-in-up shadow-2xl border border-green-100">
+                <button onclick="closeModal('modalTransistor')"
+                        class="absolute top-4 right-6 text-3xl text-gray-500 hover:text-red-500 transition">
+                    &times;
+                </button>
+                <div class="flex flex-col md:flex-row gap-6">
                     <img src="/sources/trans.png" alt="Transistor 2N2222"
-                         class="w-full h-56 object-contain mb-6 rounded-xl border border-green-200" />
-                    <h3 class="text-2xl font-bold text-green-700 mb-2">Transistor 2N2222</h3>
-                    <p class="text-gray-700 text-lg">Actúa como interruptor electrónico para controlar el encendido del relé. ¡Haz clic para más información!</p>
-                </div>
-
-                <!-- Card: Relé -->
-                <div onclick="openModal('modalRele')" class="cursor-pointer bg-white rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-green-300">
-                    <img src="/sources/relay.png" alt="Relé electromecánico"
-                         class="w-full h-56 object-contain mb-6 rounded-xl border border-green-200" />
-                    <h3 class="text-2xl font-bold text-green-700 mb-2">Relé Electromecánico</h3>
-                    <p class="text-gray-700 text-lg">Permite controlar cargas mayores como ventiladores o bombas. ¡Haz clic para conocer su funcionamiento!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- Modal: Transistor 2N2222 -->
-    <div id="modalTransistor" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-3xl max-w-3xl w-full mx-4 p-8 relative animate-fade-in-up shadow-2xl">
-            <button onclick="closeModal('modalTransistor')" class="absolute top-4 right-6 text-3xl text-gray-500 hover:text-red-500">&times;</button>
-            <div class="flex flex-col md:flex-row gap-6">
-                <img src="/sources/trans.png"
-                     alt="Transistor 2N2222" class="w-full md:w-1/2 rounded-xl object-contain border border-green-300" />
-                <div class="md:w-1/2">
-                    <h3 class="text-3xl font-bold text-green-700 mb-4">Transistor 2N2222</h3>
-                    <p class="text-gray-700 mb-4 text-lg">
-                        Transistor NPN muy popular en proyectos electrónicos. En este invernadero inteligente actúa como un interruptor para activar el relé, permitiendo el control de actuadores como bombas o ventiladores.
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 text-base space-y-1">
-                        <li>Corriente máxima: 800 mA</li>
-                        <li>Voltaje máximo: 40 V</li>
-                        <li>Ganancia (hFE): ~100</li>
-                        <li>Ideal para aplicaciones de conmutación</li>
-                    </ul>
+                         class="w-full md:w-1/2 rounded-xl object-contain border border-green-300 shadow-sm" />
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold text-green-700 mb-4">Transistor 2N2222</h3>
+                        <p class="text-gray-700 mb-4 text-lg">
+                            Transistor NPN muy popular en proyectos electrónicos. En este invernadero inteligente actúa como un interruptor para activar el relé, permitiendo el control de actuadores como bombas o ventiladores.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 text-base space-y-1">
+                            <li>Corriente máxima: 800 mA</li>
+                            <li>Voltaje máximo: 40 V</li>
+                            <li>Ganancia (hFE): ~100</li>
+                            <li>Ideal para aplicaciones de conmutación</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal: Relé -->
-    <div id="modalRele" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-3xl max-w-3xl w-full mx-4 p-8 relative animate-fade-in-up shadow-2xl">
-            <button onclick="closeModal('modalRele')" class="absolute top-4 right-6 text-3xl text-gray-500 hover:text-red-500">&times;</button>
-            <div class="flex flex-col md:flex-row gap-6">
-                <img src="/sources/relay.png"
-                     alt="Relé Electromecánico" class="w-full md:w-1/2 rounded-xl object-contain border border-green-300" />
-                <div class="md:w-1/2">
-                    <h3 class="text-3xl font-bold text-green-700 mb-4">Relé Electromecánico</h3>
-                    <p class="text-gray-700 mb-4 text-lg">
-                        Dispositivo electromecánico que permite controlar dispositivos de alto voltaje mediante una señal de bajo voltaje. En este proyecto se utiliza para activar bombas, ventiladores o iluminación LED.
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 text-base space-y-1">
-                        <li>Tensión de activación: 5V DC</li>
-                        <li>Capacidad de carga: hasta 10A 250V</li>
-                        <li>Aislamiento entre control y carga</li>
-                        <li>Seguridad y eficiencia en automatización</li>
-                    </ul>
+        <!-- Modal: Relé Electromecánico -->
+        <div id="modalRele" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-3xl max-w-3xl w-full mx-4 p-8 relative animate-fade-in-up shadow-2xl border border-green-100">
+                <button onclick="closeModal('modalRele')"
+                        class="absolute top-4 right-6 text-3xl text-gray-500 hover:text-red-500 transition">
+                    &times;
+                </button>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <img src="/sources/relay.png" alt="Relé Electromecánico"
+                         class="w-full md:w-1/2 rounded-xl object-contain border border-green-300 shadow-sm" />
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-bold text-green-700 mb-4">Relé Electromecánico</h3>
+                        <p class="text-gray-700 mb-4 text-lg">
+                            Dispositivo electromecánico que permite controlar dispositivos de alto voltaje mediante una señal de bajo voltaje. En este proyecto se utiliza para activar bombas, ventiladores o iluminación LED.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 text-base space-y-1">
+                            <li>Tensión de activación: 5V DC</li>
+                            <li>Capacidad de carga: hasta 10A 250V</li>
+                            <li>Aislamiento entre control y carga</li>
+                            <li>Seguridad y eficiencia en automatización</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
         <div class="modal fade" id="codigoModal" tabindex="-1" aria-labelledby="codigoModalLabel" aria-hidden="true">
